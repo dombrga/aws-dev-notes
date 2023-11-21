@@ -34,3 +34,12 @@ permissions
 - Serverless approaches are ideal for applications where load can vary dynamically.
 -  EC2 status checks and Elastic Load Balancing health checks can complete before the health check grace period expires.
 -  PutMetricData is used to publish metric data points to CloudWatch. PutMetricAlarm can be used to create an alarm and associate it with a metric and threshold.
+-  namespace is a container in cloudwatch metrics . EC2 uses aws/ec2 namespace. it cannot be used to filter results to show the metrics of a spec env
+- dimension in cw metrics is like a filter.
+- security group is like a firewall that controls inbound/outbound traffic.
+- in cf template, DeletionPolicy to Retain to prevent accidental deletion of RESOURCE. Set stack termination protection to Enable for WHOLE STACK.
+- AWSLambdaBasicExecutionRole grants permission to upload to cw, not to s3. Lambda func execution role is an iam role that grants the func to access aws services and resources.
+- route53 is dns service. clouffront is a cdn service
+- app load balancer supports path-based routing.
+- deploy ssl certs to load balancer
+- sort keys can filtered through range queries like >, <, begins_with, between
