@@ -43,3 +43,26 @@ permissions
 - app load balancer supports path-based routing.
 - deploy ssl certs to load balancer
 - sort keys can filtered through range queries like >, <, begins_with, between
+- sse-kms supports automatic key rotation for s3
+- synchronous express workflow can handle errors and retries and execute parallel tasks without additional code
+- create-stack command creates a stack as specified in the template provided.
+- codebuild natively supports cw events. sns integrates with cw
+- eventbridge can be used to trigger Lambda based on cw metrics. pullRequestCreated and pullRequestSourceBranchUpdated events
+- read replicas are not a feature of dynamodb. Using DAX is the recommended approach to reducing response times for read-intensive applications, applications that read a few items frequently, and applications that perform repeated reads against a large set of data.
+- BatchGetItem to retrieve multiple specific items with single api call, minimum impact to db
+- Scan get all items in dynamodb
+- aws athena lets you query data stored in s3. interactive query service. also serverless
+- you must use X-Forwarded-For headers to capture client IP addresses
+- aws elasticache for memcached scales horizontally. not recommended for real-time
+- for more performant Lambda, establish your database connections from within the Lambda execution environment to enable connection reuse.
+- viewer policy in cloudfront
+- ElastiCache is a great option for storing session data.
+- SQS is an AWS-managed message queuing service that allows you to decouple and scale microservices, distributed systems, and serverless applications.
+- You will need to enable the function to connect to the VPC by providing the correct subnet and security group needed to access the RDS instance.
+- lambda layers is like a separate folder from the dep package that contains libraries the Lambda use. Lambda deployment package should be as small as possible
+- EFS is a good option for storing persistent files because it enables sharing, dynamic updates, and is persistent storage.'
+- By using Parameter Store to store any secrets as a SecureString, the secrets are encrypted and not stored in plain text.
+- Pre Signed urls are used when we need to give access to an object in s3 securely to viewers who don't have AWS credentials. Signed urls / cookies are used to restrict access to the files in cloudfront edge caches and s3 for authenticated users and subscribers.
+- A status of ALARM indicates that the metric or expression is outside the defined threshold.
+- aws xray can also be used for Lambda.
+- CloudWatch cannot be used to identify performance issues in distributed serverless applications.

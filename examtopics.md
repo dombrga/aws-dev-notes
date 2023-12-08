@@ -163,3 +163,40 @@ B. The resource-based policy for the Lambda function does not have the required 
 #85
 B. Update the Lambda function in the API Gateway API integration request to use the hotfix alias. Deploy the API Gateway API to a new stage named hotfix. Test the backend. 
 D. Modify the Lambda function by fixing the code. Test the Lambda function. When the Lambda function is working as expected, publish the Lambda function as a new version. Create the alias hotfix. Point the alias to the new version. 
+
+#86
+C. Run the cdk synth and sam local invoke commands with the function construct identifier and the path to the synthesized CloudFormation template.
+
+#87
+D. Use the canary release deployment option in API Gateway. Direct a percentage of the API traffic using the canarySettings setting.
+
+#88 
+B. Add an attribute with the expiration time; enable the Time To Live feature based on that attribute.
+
+#89
+C. Grant permission to the central AWS account for EventBridge to access the receiver AWS accounts. Add an EventBridge event bus on the receiver AWS accounts as the targets to the existing EventBridge rule.
+
+#91
+B. Create an AWS Lambda function by using the AWS Serverless Application Model (AWS SAM). Expose the Lambda functionality by using Amazon API Gateway.
+
+#92
+A. Store the session state in Amazon ElastiCache.
+
+#95
+C. VPC Flow Logs
+VPC Flow Logs capture information about the IP traffic going to and from network interfaces in a VPC. This includes traffic that traverses a VPN connection.
+
+#96
+A. Create an Amazon Simple Notification Service (Amazon SNS) topic. Configure S3 event notifications with a destination of the SNS topic. Subscribe the Lambda function to the SNS topic. Create an email notification subscription to the SNS topic.
+
+#97
+A. Refactor the Lambda function into two functions. Configure one function to transform the data and one function to load the data into the DynamoDB table. Create an Amazon Simple Queue Service (Amazon SQS) queue in between the functions to hold the items as messages and to invoke the second function.
+
+#98
+A. Create an Amazon Elastic File System (Amazon EFS) file system. Mount the EFS file system in Lambda. Store the result files and log file in the mount point. Append the log entries to the log file.
+
+#99
+A. Create a new version of the Lambda function. Create a new stage on API Gateway with integration to the new Lambda version. Use the new API Gateway stage to test the Lambda function.
+
+#100
+B. Move the development and production environments into separate AWS accounts. Add a resource policy to each Lambda function to allow only S3 buckets that are within the same account to invoke the function.
