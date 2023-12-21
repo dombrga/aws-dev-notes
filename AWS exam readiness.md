@@ -26,7 +26,7 @@ permissions
 - cf change sets to notify if any resources will be deleted or updated
 - cloudwatch does not provide average latency bet app services
 - subnet is a range of IP addrs in VPC
-- The data in a local secondary index is organized by the same partition key as the base table, but with a different sort key.
+- The data in a local secondary index is organized by the same partition key as the base table, but with a different sort key. GSI has different partition and sort key from the orig table
 - A query operation is used to search for an item using a primary key value. A scan operation reads every item in a table.
 - Environment variables apply to AWS Lambda, not api gateway. Stage variables are name-value pairs that you can define as configuration attributes associated with a deployment stage of a REST API. They act like environment variables and can be used in your API setup and mapping templates.
 - IAM roles are based on temporary security tokens, which are rotated automatically.
@@ -40,7 +40,7 @@ permissions
 - in cf template, DeletionPolicy to Retain to prevent accidental deletion of RESOURCE. Set stack termination protection to Enable for WHOLE STACK.
 - AWSLambdaBasicExecutionRole grants permission to upload to cw, not to s3. Lambda func execution role is an iam role that grants the func to access aws services and resources.
 - route53 is dns service. clouffront is a cdn service
-- app load balancer supports path-based routing.
+- app load balancer supports path-based routing. Application Load Balancer supports sticky sessions, enabling stateful applications.
 - deploy ssl certs to load balancer
 - sort keys can filtered through range queries like >, <, begins_with, between
 - sse-kms supports automatic key rotation for s3
@@ -74,3 +74,14 @@ permissions
 - cw does not record latency and info about incoming/outgoing http reqs
 - xray daemon needs xray sdk to upload trace data to xray
 - xray service map has latency and any failues
+- cloudformation nested stacks to reuse or base a stack from a given stack.
+- ensure AMIs are available in the region you want when launching ec2 to multiple regions
+- PutMetricData to send custom metric data to cw
+- ss3-kms for s3 
+- dynamodb query operation uses primary key
+- buildspec and codebuild env variables are used by codebuild
+- appspec file is used by codedeploy
+- Export in Output section and Fn::ImportValue in cf for share details between cf templates
+- parallel scan to speed up dynamodb scan ops
+- Parameters section of cf is used for passing input values
+- 
