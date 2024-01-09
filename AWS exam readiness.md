@@ -92,3 +92,5 @@ permissions
 - cloudwatch events/eventbridge facilitate event-driven design
 - xray provides a complete view of reqs of the app
 - cw is for monitoring and collect metrics. x-ray is for debugging and optimization, best for microservices
+- cross-account access for other aws acct to access resources in your aws acct
+- default sqs message visib timeout is 30secs
