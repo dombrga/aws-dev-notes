@@ -82,6 +82,9 @@ permissions
 - buildspec and codebuild env variables are used by codebuild
 - appspec file is used by codedeploy
 - Export in Output section and Fn::ImportValue in cf for share details between cf templates
-- parallel scan to speed up dynamodb scan ops
+- parallel scan and reducing page size to speed up dynamodb scan ops
 - Parameters section of cf is used for passing input values
-- 
+- While versioning in S3 is useful for data protection and archival, it's not a requirement for hosting a static website.
+- CloudWatch can send a notification to an SNS topic
+- cw logs to interactively search and analyze log data
+- aws sdk for javascript for retry and backoff
