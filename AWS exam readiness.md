@@ -88,3 +88,7 @@ permissions
 - CloudWatch can send a notification to an SNS topic
 - cw logs to interactively search and analyze log data
 - aws sdk for javascript for retry and backoff
+- nat gateway is for from vpc to outside
+- cloudwatch events/eventbridge facilitate event-driven design
+- xray provides a complete view of reqs of the app
+- cw is for monitoring and collect metrics. x-ray is for debugging and optimization, best for microservices
