@@ -16,6 +16,11 @@ Handler - SAM template property. Lambda function code execution begins
 - use eventbridge or CloudWatch Events to trigger lambda function after every specific time
 
 - set DeletionPolicy to Retain in cf
+- cf change sets to notify if any resources will be deleted or updated
+- in cf template, DeletionPolicy to Retain to prevent accidental deletion of RESOURCE. To preserve a resource when its stack is deleted
+- Set stack termination protection to Enable to protect WHOLE STACK against accidental deletion.
+- Export in Output section and Fn::ImportValue in cf for share details between cf templates
+- Parameters section of cf is used for passing input values
 
 - IAM user is not associated with ec2 instance. Policy, instance roles and 
 permissions
@@ -23,7 +28,6 @@ permissions
 - athena can be used to run sql on data on s3
 - envelope encryption. encrypting data key with another key
 - use iam instance role to grant access to ec2 instances
-- cf change sets to notify if any resources will be deleted or updated
 - cloudwatch does not provide average latency bet app services
 - subnet is a range of IP addrs in VPC
 - The data in a local secondary index is organized by the same partition key as the base table, but with a different sort key. GSI has different partition and sort key from the orig table
@@ -37,7 +41,6 @@ permissions
 -  namespace is a container in cloudwatch metrics . EC2 uses aws/ec2 namespace. it cannot be used to filter results to show the metrics of a speci env
 - dimension in cw metrics is like a filter.
 - security group is like a firewall that controls inbound/outbound traffic.
-- in cf template, DeletionPolicy to Retain to prevent accidental deletion of RESOURCE. Set stack termination protection to Enable for WHOLE STACK.
 - AWSLambdaBasicExecutionRole grants permission to upload to cw, not to s3. Lambda func execution role is an iam role that grants the func to access aws services and resources.
 - route53 is dns service. clouffront is a cdn service
 - app load balancer supports path-based routing. Application Load Balancer supports sticky sessions, enabling stateful applications.
@@ -81,16 +84,18 @@ permissions
 - dynamodb query operation uses primary key
 - buildspec and codebuild env variables are used by codebuild
 - appspec file is used by codedeploy
-- Export in Output section and Fn::ImportValue in cf for share details between cf templates
 - parallel scan and reducing page size to speed up dynamodb scan ops
-- Parameters section of cf is used for passing input values
 - While versioning in S3 is useful for data protection and archival, it's not a requirement for hosting a static website.
 - CloudWatch can send a notification to an SNS topic
 - cw logs to interactively search and analyze log data
 - aws sdk for javascript for retry and backoff
 - nat gateway is for from vpc to outside
 - cloudwatch events/eventbridge facilitate event-driven design
-- xray provides a complete view of reqs of the app
+- xray provides a complete view of requests of the app. x-ray collects data about requests that your app serves.
 - cw is for monitoring and collect metrics. x-ray is for debugging and optimization, best for microservices
 - cross-account access for other aws acct to access resources in your aws acct
 - default sqs message visib timeout is 30secs
+- codedeploy agent is installed in ec2 instance
+- use default encryption in s3 to encrypt objects at rest
+- Install the X-Ray daemon on the EC2 instances inside your Elastic Beanstalk environment.
+- Simulate an AZ failure by performing a reboot with forced failover on the RDS instance.
