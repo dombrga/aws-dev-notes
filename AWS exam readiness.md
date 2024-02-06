@@ -99,3 +99,5 @@ permissions
 - use default encryption in s3 to encrypt objects at rest
 - Install the X-Ray daemon on the EC2 instances inside your Elastic Beanstalk environment.
 - Simulate an AZ failure by performing a reboot with forced failover on the RDS instance.
+- $LATEST is the latest unpublished version. Unqualified arn points to the new version.
+- sse-kms is an enc key administered by you.
