@@ -528,9 +528,8 @@
       - **x-amz-server-side-encryption-customer-algorithm**, for integrity checks.
       - no extra cost. Just have more effort to use.
 
-
-3.  **Client-side encryption** — encrypted before upload.
-4. Header: `x-amz-server-side-encryption` = `AES256` or `aws:kms`.
+    **Client-side encryption** — encrypted before upload.
+3. Header: `x-amz-server-side-encryption` = `AES256` or `aws:kms`.
 
 
 ## June 16, 2026 — S3 Security
