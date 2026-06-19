@@ -515,8 +515,93 @@
 
 1. **Enabled by default**.
 2. Encryption options:
-   - **SSE-S3** — managed by AWS; default.
-   - **SSE-KMS** — AWS KMS-managed keys; more customizable; requires additional permissions and incurs extra charges; useful for compliance requirements.
-   - **SSE-C** — customer-managed keys; you fully manage and use your own keys; S3 has no access to the key.
-   - **Client-side encryption** — encrypted before upload.
-3. Header: `x-amz-server-side-encryption` = `AES256` or `aws:kms`
+
+    **SSE-S3** — managed by AWS; default.
+
+    **SSE-KMS**
+      - AWS KMS-managed keys; more customizable; requires additional permissions and incurs extra charges; useful for compliance requirements.
+
+    **SSE-C**
+      - customer-managed keys; you fully manage and use your own keys; S3 has no access to the key.
+      - **x-amz-server-side-encryption-customer-algorithm** which must be AES257.
+      - **x-amz-server-side-encryption-customer-algorithm** = encryption key
+      - **x-amz-server-side-encryption-customer-algorithm**, for integrity checks.
+      - no extra cost. Just have more effort to use.
+
+
+3.  **Client-side encryption** — encrypted before upload.
+4. Header: `x-amz-server-side-encryption` = `AES256` or `aws:kms`.
+
+
+## June 16, 2026 — S3 Security
+
+### S3 client-side encryption
+1. encrypt data before transporting to s3.
+2.  you fully manage keys and encryption rotations.
+3.  encrypt before sending to s3 and decrypt after getting from.
+
+### optimizing encryption by bucket keys
+1. bucket key is bucket-level key for sse-kms.
+2. capable of reducing cost by up to 99%.
+3. short-lived key. Stored in s3 for finite period of time. Like a cached version of key.
+
+### s3 encryption in transit
+1. shoud use TLS during http req to S3.
+2. always use S3 https endpoints.
+3. use aws:SecureTransport to enforce HTTPS protocol.
+
+## MFA delete
+1. enforces mfa for deletion. Turn on mfa first.
+2. to prevent accidental deletion.
+3. works for permanent deletion, suspending versioning.
+4. like google auth or hardware like yubikey.
+
+### s3 access logs
+1. detailed records of requests to s3.
+2. for security and auditing needs, analyzing bucket and object usage. Any information on requests made to your bucket.
+3. you specify target bucket (to store the logs?). Must reside in the same region as source bucket.
+
+### S3 granting access to objects with pre-signed URLS
+1. presigned urls to grant time-limited access to objects without modifying bucket policy.
+2. How?
+   1. you generate URL via console, cli or sdk.
+   2. URL can be entered in browser or app to download or upload.
+3. uses the same credentials as the one who created the URL.
+4. can be used multiple times depending on config.
+5. exam scenarios
+   1. expired url resulting in failed downloads.
+   2. iam user who generated URL does not have the right permissions, resulting in access denied.
+   3. urls to allow subscribed users to premium content behind paywall.
+
+### S3 access points
+1. simplify data access by any AWS service to s3. Like a layer before S3.
+2. appears as named network.
+3. some scenarios
+   1. configure access point to only allow trafic from a VPC.
+   2. custom public access setting for indi endpoint instead of whole bucket.
+      - For example, "developer access point", when called, can only do operations on /development prefix
+
+### s3 object lambda
+1. add code to modify and process data before returning to user.
+2. use cases
+  - remove sensitive information before returning to client.
+  - convert data between formats.
+3. flow
+   1. user calls s3 object lambda access pt.
+   2. from 1, calls lambda.
+   3. from 2, calls s3 access pt.
+   4. from 3, retrieves object in s3.
+   5. lambda func runs and delivered to user.
+
+### s3 object locks
+1. write once, read many (WORM) model.
+2. helps prevent objects get deleted or modified for some time.
+3. kinds
+  1. governance mode
+    - regular users cannot overwrite or delete.
+  2. compliance mode
+    - cant be overwritten/deleted by any user for some time.
+4. versioning must be enabled.
+5. Legal hold. Prevents object from overwritten or deleted. Remains until removed.
+6. s3 glacier vault lock
+  - easily deploy and enforce compliance controls to s3 glacier vaults.
