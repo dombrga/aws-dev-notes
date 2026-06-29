@@ -44,3 +44,30 @@
 4. network access is controlled via VPC sec grps.
 5. db instance can have public ip. Not recommended.
 6. db instance not accessible via ssh.
+
+## June 26, 2026
+
+### rds backups
+1. automated backup
+   - specify a backup window.
+   - rds creates a volume snapshot of db instance. First snapshot is entire db instance, after are incremental.
+   - set retention period (0-35 days). 0 if you want to disable retention.
+   - backups are stored in s3, but no access to the storage.
+   - can be replicated cross-Region.
+2. manual backup
+   - manual backup trigger
+   - retention is manual
+   - you create new db instance by restoring a snapshot.
+   - you cannot restore to an existing db instance.
+3. you pay for rds storage even if you have stopped rds instance.
+
+### multi-az and HA
+1. In multi-az
+   - creates exact copy of db in another AZ called standby replica. You cannot directly read/write from the standby.
+   - aws automatically handles data replication between primary and standby
+   - protection from instance failure and downtime.
+   - multi-az deployment model
+     1. instance deployment - has one standby db instance by default.
+     2. cluster deployment - 2 standby instance
+   - not meant for scaling, only for failure and disaster recovery and resiliency.
+2. db instance failovers for multi-az takes 60-120 secs.
