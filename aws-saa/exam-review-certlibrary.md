@@ -10,12 +10,11 @@ D. Enable AWS Shield Advanced and assign the ELB to it.
 6. B. Create a customer managed multi-Region KMS key. Create an S3 bucket in each Region. Configure replication between the S3 buckets. Configure the application to use the KMS key with client-side encryption.
 7. B. Attach the appropriate IAM role to each existing instance and new instance. Use AWS Systems Manager Session Manager to establish a remote SSH session.
 8. C. Add an Amazon CloudFront distribution in front of the S3 bucket. Edit the Route 53 entries to point to the CloudFront distribution.
-
-
-
-1.  B. Create an Amazon AppFlow flow to transfer data between each SaaS source and the S3 bucket. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete.
+9. A. Change the storage type to Provisioned IOPS SSD.
+10. A. Create an Amazon Kinesis Data Firehose delivery stream to ingest the alerts. Configure the Kinesis Data Firehose stream to deliver the alerts to an Amazon S3 bucket. Set up an S3 Lifecycle configuration to transition data to Amazon S3 Glacier after 14 days.
+11.  B. Create an Amazon AppFlow flow to transfer data between each SaaS source and the S3 bucket. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete.
 
 AppFlow is a fully managed AWS service built specifically for transferring data between SaaS applications and AWS services like S3.
-	12. C. Deploy a gateway VPC endpoint for Amazon S3.
-	13. B. Establish a new AWS Direct Connect connection and direct backup traffic through this new connection.
+12. C. Deploy a gateway VPC endpoint for Amazon S3.
+13. B. Establish a new AWS Direct Connect connection and direct backup traffic through this new connection.
 
