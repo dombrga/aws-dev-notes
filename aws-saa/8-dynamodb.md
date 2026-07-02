@@ -42,12 +42,12 @@
 
 ### dynamodb security
 1. dynamodb is publicly accessible service by public endpt.
-2. you need to elverage iam to control access and auth to tables.
+2. you need to leverage iam to control access and auth to tables.
 3. encryption at rest by default.
 4. leverage vpc endpts to keep traffic within aws. Also use resource-based policies.
 
 ### dynamodb global table
-1. deployes multiregion, multi master db. Identical tables in diff regions.
+1. deploys multiregion, multi master db. Identical tables in diff regions.
 2. provides low latency
 3. for active-active implem. Means can read/write to any table within region.
 4. dynamodb streams must be enabled.
@@ -87,7 +87,7 @@
    - on demand backup
    - point in time recovery (PITR) - continuous backups managed by dynamodb; 35 days of recovery points.
    - no impact on performance and availability.
-   - encypted already.
+   - encrypted already.
    - charged on size and duration.
 4. importing data
    - csv, dynamodb json, ion
