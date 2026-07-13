@@ -9,8 +9,8 @@
       - good for space and when power are constrained.
       - offerings: snowcone and snowcone ssd
    2. aws snowball edge
-      -  jack of all trades device
-      -  with onboard storage and compute power
+      -  "jack of all trades" device
+      -  larger device with onboard storage and compute power
       -  can process data locally, run edge-compute workloads, transfer to or from aws.
       -  data transfer is faster than internet speeds.
       -  3 options: storage optimized, compute optimized, compute optimized with gpu.
