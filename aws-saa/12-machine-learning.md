@@ -18,3 +18,19 @@
 
 6. example. Need to use ML algo to build and train models for online shopping platforn.
 7. might need ML background to leverage sagemaker.
+
+## amazon rekognition
+1. aws computer vision product that automates recognition of pictures and videos using DL and neural nets.
+2. understand and label whats in pics and vids.
+3. create collection containing stored faces for detection.
+4. to find objects, people (face recog or celebrity matching),
+5. use cases
+  1. content moderation - so apps and websites are family friendly. Common exam scenario.
+  2. celebrity recog.
+  3. face detection and analysis - recognize faces, detect emotions, clothing acces, eye positions.
+  4. streaming video events detection
+6. confidence scores - indicates likelihood.
+7. scenario 1: content moderation
+  1. rekognition can analyze images or videos in S3.
+
+**exam scenario:** need a solution to prevent photo/vid with undesired content from being uploaded to web app. You dont want to involve training ml model.
