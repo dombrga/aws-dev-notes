@@ -99,3 +99,17 @@ exam tip: can leverage amazon eventbridge instead of lambda.
   - used when you have data stored other than s3.
   - query in place of build pipeline
   - data source connectiors - cw logs, dynamo, documentdb, rds, athena query federation sdk
+
+## amazon quicksight
+1. managed, serverless BI data viz service powered by ML.
+2. easily create interactive dashboards and share them.
+3. integrates with rds, aurora, athena, s3.
+4. concepts
+  1. SPICE engine. Need to load data into quicksight.
+  2. column level security (CLS)
+  3. pay per session
+5. dashboard, user, groups
+  1. create separate users for using quicksight. Only exists in quicksight, not iam.
+6. amazon quicksight enterprise - leverages machine learning to help uncover insights, trends, and forecast metrics.
+
+Exam tips: if **business intelligence** comes up; commonly used with athena; visualize data or show KPIs.
