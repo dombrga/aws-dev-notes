@@ -113,3 +113,23 @@ exam tip: can leverage amazon eventbridge instead of lambda.
 6. amazon quicksight enterprise - leverages machine learning to help uncover insights, trends, and forecast metrics.
 
 Exam tips: if **business intelligence** comes up; commonly used with athena; visualize data or show KPIs.
+
+## amazon opensearch service
+1. managed service to run search and analytics engine clusters.
+2. successor to elasticsearch service.
+3. support search to all fields within data.
+4. provides dashboard.
+5. ingest data from cw, cloudtrail, s3, kinesis data fh.
+6. security
+  1. access by iam
+  2. cognito
+  3. kms encryption
+  4. tls encrypt
+  5. aws private link.
+7. opensearch domain - equivalent of open source opensearch cluster.
+8. opensearch service access policies
+  1. resource-based
+  2. identity-based
+  3. ip-based
+9. amazon opensearch serverless
+  - on-demand, auto scaling option for infrequent intermittent or unpredictable workloads.
