@@ -62,6 +62,40 @@ exam pro tip: mention of large and hadoop, think EMR.
 4. connect to 70+ sources and manage data.
 5. concepts
    1. data catalog - metadata store; table definition, job feniitions and other control info for ETL workflows.
-   2. crawlers - connect to your data sources, infer data scheams, and create metadata table definition
+   2. crawlers - connect to your data sources, infer data schemas, and create metadata table definition
    3. etl jobs - extract data from sources, trasform data using apache spark scripts, and load data into targets.
    4. triggers - resources or methods to start jobs.
+
+exam tip: hundreds of csv files sent to s3 bucket, to be converted to apache parquet format. Use glue.
+
+exam tip: can leverage amazon eventbridge instead of lambda.
+
+6. glue studio - UI to create and run etl jobs.
+7. aws glue streaming - handle streaming data in near realtime.
+8. job bookmarks.
+9. glue databrew - visual data preparation tool for cleaning and normalizing data for analytics and ML.
+10. aws glue elastic views - to build views.
+11. sql, autuomated, continuous
+
+## amazon athena
+1. serverless, interactive query service for easy analysis for data in s3.
+2. based on presto
+3. data formats
+   1. csv
+   2. json
+   3. orc
+   4. avro
+   5. parquet (appears on exam)
+4. use cases
+   1. log analysis stored in s3 like cloudtrail, vpc flow logs, elb
+   2. BI and analytics
+   3. data lake queries
+5. athena is used in conjunction with amazon quicksight - create dashboards, reports, visualizations.
+6. best practices
+   1. store data with a columnar design.
+   2. use ORC or parquet format. you can convert using aws glue.
+   3. should use partitioning for faster query. More prefixes are better.
+7. amazon athena federated query
+  - used when you have data stored other than s3.
+  - query in place of build pipeline
+  - data source connectiors - cw logs, dynamo, documentdb, rds, athena query federation sdk
