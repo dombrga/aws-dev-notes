@@ -34,3 +34,30 @@
   1. rekognition can analyze images or videos in S3.
 
 **exam scenario:** need a solution to prevent photo/vid with undesired content from being uploaded to web app. You dont want to involve training ml model.
+
+## amazon polly
+1. service to turn text into speech.
+2. different languages.
+3. voice options:
+  1. generative engine - largest model. humanlike
+  2. neural -
+  3. long form - humanlike, better at expressing emotion than neural.
+  4. standard tts - default, natural sounding
+4. use cases
+  1. read news sites to you
+  2. elearning platforms to read lessons
+  3. accessibility apps.
+5. documents and lexicons
+  1. input can be plaintext or SSML.
+  2. ssml gives you more control over generated speech.
+  3. pronunciation lexicons
+
+## amazon translate
+1. automate language translation.
+
+## amazon lex
+1. service for building conversational interfaces for apps using voice and text. For no ML experience.
+2. powers Alexa.
+3. build natural language chatbots on-demand.
+4. NLU and ASR.
+
