@@ -74,3 +74,10 @@
 3. detects and returns useful info from unstructured clinical text.
 4. doctor notes, discharge summaries, test results, etc.
 5. uses NLP.
+
+## amazon forecast
+1. managed service to produce time series forecast using ML algorithms.
+2. automatically learns your data and select right ML algo.
+3. used by Amazon.com for forecasting sales data.
+4. no longer available to new customers.
+5. thousand of iot sensors, historical values.
