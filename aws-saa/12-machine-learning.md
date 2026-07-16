@@ -61,3 +61,8 @@
 3. build natural language chatbots on-demand.
 4. NLU and ASR.
 
+## amazon connect
+1. ai-powered contact center.
+2. integrates with other CRM software.
+3. receiving customer calls, engage customers.
+4. commonly used with Lex.
