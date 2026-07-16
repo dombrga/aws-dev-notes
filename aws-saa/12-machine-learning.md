@@ -81,3 +81,7 @@
 3. used by Amazon.com for forecasting sales data.
 4. no longer available to new customers.
 5. thousand of iot sensors, historical values.
+
+## amazon kendra
+1. to create intelligent search service powered by ML and NLP.
+2. enterprise search applications can bridge different silos of info, like s3 buckets, file servers, etc.
