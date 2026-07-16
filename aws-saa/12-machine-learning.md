@@ -66,3 +66,11 @@
 2. integrates with other CRM software.
 3. receiving customer calls, engage customers.
 4. commonly used with Lex.
+
+## amazon comprehend
+1. managed, serverless service for NLP to understand meaning and sentiment of text.
+2. use cases: detect if customers have positive or negative experience with staff.
+#### amazon comprehend medical
+3. detects and returns useful info from unstructured clinical text.
+4. doctor notes, discharge summaries, test results, etc.
+5. uses NLP.
