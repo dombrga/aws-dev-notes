@@ -85,3 +85,7 @@
 ## amazon kendra
 1. to create intelligent search service powered by ML and NLP.
 2. enterprise search applications can bridge different silos of info, like s3 buckets, file servers, etc.
+
+## amazon textract
+1. managed service to extract typed text, handrwritten from scanned documents.
+2. pdf, jpg, etc
