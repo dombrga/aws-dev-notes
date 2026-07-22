@@ -94,3 +94,11 @@
 1. ML service that uses your own data to generate real-time recommendations for users.
 2. for creating personalized emails, targeted marketing and personalized search results.
 
+## amazon transcribe
+1. service for audio to text, speech to text.
+2. batch transcription or realtime streaming transcription.
+3. can be used to automatically identify the language being spoken.
+4. custom vocabulary filters.
+5. toxic speech detection to help in moderation.
+6. redaction to mask PII.
+7. generate subtitles in videos.
