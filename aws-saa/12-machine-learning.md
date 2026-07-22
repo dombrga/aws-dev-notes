@@ -89,3 +89,8 @@
 ## amazon textract
 1. managed service to extract typed text, handrwritten from scanned documents.
 2. pdf, jpg, etc
+
+## amazon personalize
+1. ML service that uses your own data to generate real-time recommendations for users.
+2. for creating personalized emails, targeted marketing and personalized search results.
+
