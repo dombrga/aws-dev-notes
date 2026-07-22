@@ -102,3 +102,8 @@
 5. toxic speech detection to help in moderation.
 6. redaction to mask PII.
 7. generate subtitles in videos.
+
+## amazon fraud detector
+1. fraud detection service to automate detection of potentially fraudulent activities.
+2. unauth financial tx, creation of fake accts, abuse free trial
+3. based on your data.
