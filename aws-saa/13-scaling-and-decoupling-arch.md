@@ -41,4 +41,20 @@ Pro tip: create tiers to separate public and private network traffic.
 
 **exam scenario:** app on ec2 instances in multi AZ. Internet facing ELB for customer to use. Only allow access to EC2 instanes from ALB. Deploy ec2 in private subnet.
 
-
+## application load balancer (ALB)
+1. works in layer 7.
+2. supports content-type, cookies, custom headers, other layer 7 attribs.
+3. can listen only to http or https.
+4. supports websockets, http/2.
+5. perfect for containerized apps.
+6. ALB components
+  1. Listener - can define rules to determine how reqs are routed to targets.
+  2. Rules - attached to Listener.
+  3. Target Group - composed of targets. EC2, lambda funcs.
+7. target types
+  1. target types: ec2 instances, ec2 tasks, lambda func, private IPs.
+8. must deploy at least ssl/tls cert to use https listener.
+9. Alias record for custom dns.
+10. X-forwarded-for, x-forwarded- port, x-forwarded-proto
+11. Port Mapping: ecs feature
+12. ALB IP change, so dont use it. Use its dns name.
