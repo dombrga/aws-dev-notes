@@ -58,3 +58,19 @@ Pro tip: create tiers to separate public and private network traffic.
 10. X-forwarded-for, x-forwarded- port, x-forwarded-proto
 11. Port Mapping: ecs feature
 12. ALB IP change, so dont use it. Use its dns name.
+
+## NLB
+1. layer 4 load balancing.
+2. no smart routing. No headers, cookies, sessions, etc.
+3. supports protocols: TCP, tls, udp, tcp_udp.
+4. higheset performing elb. Millions req/sec.
+5. can assign one static IP per az.
+6. components
+  1. Listener
+  2. Rules - no smart routing like ALB.
+  3. Target Group
+7. target types - ec2 instances, ALB, private IPs.
+8. To use TLS listener, must deploy at least one ssl/tls cert.
+9. To leverate custom dns hostnames, use Alias record.
+
+**Exam pro tip:** aws private link, statip eip, high perf
