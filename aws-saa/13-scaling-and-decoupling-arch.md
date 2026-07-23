@@ -85,3 +85,24 @@ Pro tip: create tiers to separate public and private network traffic.
   2. intrusion prevention system
   3. deep packet inspection
 6. target types - ec2 instances, private ips.
+
+## ELB optimizations
+1. session affinity (sticky sessions)
+  - allows to enable clients to always reach the same target.
+  - clb, alb, nlb.
+  - uses cookies. Overrides load balancing algo.
+  - good for maintaining user sessions.
+2. deregistration delay (connection drain)
+  - deregister connections that become unhealthy.
+  - disable if you want lb to immediate close conn to instances that are unhealthy.
+3. ssl cert and https listeners
+  - ELBs use X.509 cert for tls.
+  - ACM or from other cert providers.
+4. SSL offloading
+  1. offload
+  2. pass-through
+  3. bridging
+
+**Exam scenario:** to prevent burdeing backend resources with tls computation reqs, use ssl/tls offloading
+
+5. cross-zone load balancing
