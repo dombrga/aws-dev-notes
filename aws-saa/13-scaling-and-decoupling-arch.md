@@ -74,3 +74,14 @@ Pro tip: create tiers to separate public and private network traffic.
 9. To leverate custom dns hostnames, use Alias record.
 
 **Exam pro tip:** aws private link, statip eip, high perf
+
+## GWLB
+1. layer 3 network layer load balancing. IP packets.
+2. for specific use cases.
+3. for GENEVE protocol using port 6081.
+4. usually fronts apps for some type of traffic inspection.
+5. use cases
+  1. intrusion detection system
+  2. intrusion prevention system
+  3. deep packet inspection
+6. target types - ec2 instances, private ips.
