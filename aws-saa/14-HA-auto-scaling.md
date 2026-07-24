@@ -37,3 +37,9 @@
 ## asg instance maintenance policies
 1. launch before terminate - availability is important.
 2. terminate before launch - cost is important
+
+## ASG lifecycle hooks
+1. perform actions on instances during lifecycle events.
+2. up to 2 hrs of waiting.
+
+**Exam Scenario:** instances created by ASG need to check in to third party auditing tool when they launch or terminate. Can use lifecycle hooks to run this.
