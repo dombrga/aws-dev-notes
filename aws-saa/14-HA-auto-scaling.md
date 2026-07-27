@@ -15,7 +15,7 @@
 ## asg policies
 1. ways to scale
   1. manual
-  2. simple - relies on metrics like cpu utilization
+  2. simple - relies on differnet metrics like cpu utilization. Straightforward scaling
   3. target tracking - scaling metric/value that should be maintained at all times
   4. step scaling - for example, add 5 instances if >=60% cpu util, 10 more if >=80%.
   5. predictive - forecast future needs
@@ -43,3 +43,7 @@
 2. up to 2 hrs of waiting.
 
 **Exam Scenario:** instances created by ASG need to check in to third party auditing tool when they launch or terminate. Can use lifecycle hooks to run this.
+
+## vpc lattice
+1. managed app networking service to connect, secure, monitor services for your app in vpc.
+2. similar to kubernetes, like service mesh.
