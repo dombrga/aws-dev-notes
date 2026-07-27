@@ -48,13 +48,13 @@ Pro tip: create tiers to separate public and private network traffic.
 4. supports websockets, http/2.
 5. perfect for containerized apps.
 6. ALB components
-  1. Listener - can define rules to determine how reqs are routed to targets.
-  2. Rules - attached to Listener.
-  3. Target Group - composed of targets. EC2, lambda funcs.
-7. target types
-  1. target types: ec2 instances, ec2 tasks, lambda func, private IPs.
-8. must deploy at least ssl/tls cert to use https listener.
-9. Alias record for custom dns.
+   1. Listener - can define rules to determine how reqs are routed to targets.
+   2. Rules - attached to Listener.
+   3. Target Group - composed of targets. EC2, lambda funcs.
+7.  target types
+   1. target types: ec2 instances, ec2 tasks, lambda func, private IPs.
+8.  must deploy at least ssl/tls cert to use https listener.
+9.  Alias record for custom dns.
 10. X-forwarded-for, x-forwarded- port, x-forwarded-proto
 11. Port Mapping: ecs feature
 12. ALB IP change, so dont use it. Use its dns name.
@@ -66,12 +66,12 @@ Pro tip: create tiers to separate public and private network traffic.
 4. higheset performing elb. Millions req/sec.
 5. can assign one static IP per az.
 6. components
-  1. Listener
-  2. Rules - no smart routing like ALB.
-  3. Target Group
-7. target types - ec2 instances, ALB, private IPs.
-8. To use TLS listener, must deploy at least one ssl/tls cert.
-9. To leverate custom dns hostnames, use Alias record.
+   1. Listener
+   2. Rules - no smart routing like ALB.
+   3. Target Group
+7.  target types - ec2 instances, ALB, private IPs.
+8.  To use TLS listener, must deploy at least one ssl/tls cert.
+9.  To leverate custom dns hostnames, use Alias record.
 
 **Exam pro tip:** aws private link, statip eip, high perf
 
@@ -81,9 +81,9 @@ Pro tip: create tiers to separate public and private network traffic.
 3. for GENEVE protocol using port 6081.
 4. usually fronts apps for some type of traffic inspection.
 5. use cases
-  1. intrusion detection system
-  2. intrusion prevention system
-  3. deep packet inspection
+   1. intrusion detection system
+   2. intrusion prevention system
+   3. deep packet inspection
 6. target types - ec2 instances, private ips.
 
 ## ELB optimizations
@@ -99,9 +99,9 @@ Pro tip: create tiers to separate public and private network traffic.
   - ELBs use X.509 cert for tls.
   - ACM or from other cert providers.
 4. SSL offloading
-  1. offload
-  2. pass-through
-  3. bridging
+   1. offload
+   2. pass-through
+   3. bridging
 
 **Exam scenario:** to prevent burdeing backend resources with tls computation reqs, use ssl/tls offloading
 

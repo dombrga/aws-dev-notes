@@ -19,3 +19,27 @@
 8. Commonly integrated AWS services
   1. amazon ecs
   2. amazon eks
+
+## amazon ecs
+1. service to easily launch and manage docker containers.
+  1. easily manage anywhere from 1 to 1k conts.
+  2. appropriate kepps them online. Self-healing.
+  3. can easily registered with ELBs.
+  4. containers can have individual roles (Task role).
+2. ECS cluster - logical grouping of tasks (conts). Controlled by the launch type you choose.
+3. Launch types
+   1. ec2
+      - you choose instance types, # of instances you want to run within ecs clusters. Run multi containers on once intance.
+      - must run the ECS agent.
+      - aws handles starting and stopping of containers, but you maintain ec2 instances, like patching.
+      - large, long running workload
+  1. fargate
+      - serverless, pay-as-you-go offering.
+      - You do not provision and manage infra.
+      - you create a Task Definition.
+      - you specify CPU and ram reqs/limits
+      - large workloads and reduce operational overhead; small, burstable workload with no resource intensive reqs; periodic, batched workloads.
+  1. ec2 anywhere
+4. cost saving
+   1. spot instances for ecs ec2
+   2. compute saving plan.
