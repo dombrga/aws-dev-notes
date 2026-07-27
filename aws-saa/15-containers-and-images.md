@@ -55,3 +55,12 @@
    - aws iam role that allows containers on outside to make api calls.
    - Service itself uses this role.
    - used for pulling image from ecr, getting data in secrets manager.
+
+## load balancing ecs
+1. Service - allows you to maintain a specified # of instances of a task defn. Allows for HA.
+2. ecs services can be integrated with ELB to distribute traffic across the tasks that belong to the svc.
+3. ALB, NLB, CLB. Avoid CLB.
+4. Application Auto Scaling
+   - for auto scaling resources other than ec2.
+5. ecs published CW metrics with the svc's cpu and memory usage.
+   - ecs service auto scaling and app auto scaling leverage these metrics.
