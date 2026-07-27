@@ -43,3 +43,15 @@
 4. cost saving
    1. spot instances for ecs ec2
    2. compute saving plan.
+
+## amazon ecs concepts
+1. Task definition
+   - json formatted doc that is the blueprint of the containerized app.
+   - role, launch type, cpu/memory, network config, env vars.
+2. Task role
+   - can optionally have iam role to allow aws api calls. Like s3:GetObject, kms:Decrypt, sqs:ReceiveMessage.
+   - Gets assigned to the task (container)
+3. Task Execytion role
+   - aws iam role that allows containers on outside to make api calls.
+   - Service itself uses this role.
+   - used for pulling image from ecr, getting data in secrets manager.
