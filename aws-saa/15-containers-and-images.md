@@ -64,3 +64,33 @@
    - for auto scaling resources other than ec2.
 5. ecs published CW metrics with the svc's cpu and memory usage.
    - ecs service auto scaling and app auto scaling leverage these metrics.
+
+## ecs storage
+1. amazon ebs: db, root volums, etl workloads.
+2. amazon efs: data analytics, media proc, cms apps.
+3. FSx for windows file server: .net apps for windows file storage.
+4. docker volumes - sharing volumes on different containers on same host.
+5. bind mount - mounting host volume for data persistence.
+6. fargate and aws efs offer fully serverless solution.
+
+## amazon eks
+1.
+   1. cluster; node - vm or physical machine hosting running apps with in containers, like ec2
+   2. pods
+   3. service - feature for exposing app
+   4. jobs - one-off tasks that run until completed and then stop.
+   5. ingress - object in k8s that sets up external access to the services in the cluster. Via http and load balancing
+   6. storage - Persistent Volumes (PV) are objects for strg in a cluster and independent of pods
+2. aws-managed svc for any k8s workload.
+3. similar to ecs, but for k8s.
+4. Node types
+   1. managed node grps - allows aws to manage and provision nodes for use of eks clusters.
+   2. self managed nodes - nodes you deploy with an AMI.
+   3. aws fargate - serverless offering. Everything is managed for you, just need to specify what Pods to deploy.
+5. Eks cost opti
+   1. Spot instances support managed and self managed node grps.
+6. Scaling eks
+   1. Kubernetes Metric Server
+   2. horizontal pod autoscaler
+   3. cluster autoscaler
+7. K8s is cloud-agnostic solution for cont orchest.
