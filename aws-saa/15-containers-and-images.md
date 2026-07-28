@@ -131,3 +131,11 @@
    - register and connect k8s to be viewable in eks
    - want to view all clusters from k8s and onprem in one location.
 
+## aws app runner
+1. deploying from source code or container image to a secure web app.
+2. allows to focus on code and images by directly connecting to repositories.
+3. use case
+   1. simply deploying updated versions of code or cont images.
+   2. auto deployments when commit is pushed.
+
+**Exam pro tip:** AWS app runner is good option for inexperienced teams, no devops team, that need to quickly deploy app.
