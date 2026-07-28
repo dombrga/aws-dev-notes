@@ -41,3 +41,35 @@
 1. By default, lambda func are deployed to aws-owned vpc that allows internet access.
 2. You can allow traffic from lambda to other private aws svcs by using Lambda sec grps.
 3. If you want private subnet Lambda to access internet, you can deploy and use NAT in a public subnet.
+
+## lambda concurrency
+1. Provisioned concurrency
+   - \# of pre-initialized execution env allocated to your func.
+   - useful for reducing cold start.
+2. Reserved concurrency
+   - max # of concurrent instances
+3. Throttling - function will drop request and fail if it ran out of concurrency.
+
+## lambda snapstart
+1. provides as low as sub-second startup perf with no code changes.
+2. java 11+, python 3.12+, .net 8+.
+3. Lambda lifecycle
+   1. Init - start extensions, bootstraps runtime, run static code
+   2. Invoke
+   3. Shutdown
+
+## important lambda features
+1. lambda version
+   - publish copies of function
+   - includes version's code, runtime, archi memory, layers and most config settings.
+   - $LATEST. the current unpublished version.
+2. lambda aliases
+   - alias for easy reference
+   - pointer to a function version
+   - easily update aliases
+   - Canary testing. Allow to implement traffic splitting.
+3. Lambda layers
+   - zip file that contains supplementary code or data.
+   - to share common code or deps across lambda funcs.
+   - reduce size of deployment packages.
+   - easily share to other aws accts.
