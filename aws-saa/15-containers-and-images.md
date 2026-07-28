@@ -106,3 +106,28 @@
    2. amazon ebs container storage interface (CSI)
 
 **Exam pro tip:** HA, scalable, shared file system for eks pods? EFS is great.
+
+## securing eks
+1. EKS roles
+2. Service Account - gives pods ability to assume identity. In aws, by IAM role.
+3. EKS Pod identity - to assign iam role to svc acct so they can make aws api calls.
+
+## amazon eks distro (eks-d)
+1. k8s distro based on and used by eks.
+2. has same versions and deps deployed by eks.
+3. fully managed by you, unlike eks.
+4. you can run eks-d anywhere, like onprem, in cloud, or somewhere else.
+
+## amazon eks anywhere
+1. on-prem eks - onprem way to manage k8s clusters with same practices as eks.
+2. like eks-d
+3. k8s control pane management is operated completely by customer.
+4. amazon ECS Anywhere
+   1. for managing container-based apps onprem
+   2. no need to install and operate local container orches software.
+   3. enables standardization of container mgmt across envs.
+   4. no ELB support means lb could be less efficient.
+5. amazon eks connector
+   - register and connect k8s to be viewable in eks
+   - want to view all clusters from k8s and onprem in one location.
+
