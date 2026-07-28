@@ -94,3 +94,15 @@
    2. horizontal pod autoscaler
    3. cluster autoscaler
 7. K8s is cloud-agnostic solution for cont orchest.
+
+## eks data storage
+1. how to store data locally in your cluster?
+   1.  ebs
+   2.  efs
+   3.  FSx for lustre, netapp ontap, openzfs
+   4.  s3
+2. concepts
+   1. StorageClass - to configure default settings for ebs vol
+   2. amazon ebs container storage interface (CSI)
+
+**Exam pro tip:** HA, scalable, shared file system for eks pods? EFS is great.
