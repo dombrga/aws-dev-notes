@@ -20,4 +20,19 @@
 5. Trigger - resource or config that invokes lambda.
 6. Event source mapping - lambda resources for reading items from streams and queues.
 
-##
+## lambda config
+1. Concepts
+   1. Runtime - language-specific env where code will run.
+   2. IAM execution role - needed so lambda can make AWS api calls.
+   3. Networking - optionally define VPC.
+   4. Function Resources - define amount of memory
+2. Runtimes
+   - meant to relay invocation events or triggers, context info, responses
+   - python, java, .net, golang, ruby, node
+   - custom runtime - can create one.
+3. Lambda compute and storage config options
+   - default quota of 1000 concurrent executions per Region.
+   - memory - 128 mb to 10240 mb.
+   - env vars can be used
+   - access to /tmp directory, can be 512 mb - 10240 mb. You get billed.
+   - integration with EFS. For shared filesystem.
