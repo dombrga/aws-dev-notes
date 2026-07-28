@@ -139,3 +139,10 @@
    2. auto deployments when commit is pushed.
 
 **Exam pro tip:** AWS app runner is good option for inexperienced teams, no devops team, that need to quickly deploy app.
+
+## aws App2Container
+1. CLI to lift and shift apps into containers
+   - ecs
+   - eks
+   - app runner
+2. Java, asp.net
