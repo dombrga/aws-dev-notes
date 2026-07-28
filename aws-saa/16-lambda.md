@@ -36,3 +36,8 @@
    - env vars can be used
    - access to /tmp directory, can be 512 mb - 10240 mb. You get billed.
    - integration with EFS. For shared filesystem.
+
+## lambda networking
+1. By default, lambda func are deployed to aws-owned vpc that allows internet access.
+2. You can allow traffic from lambda to other private aws svcs by using Lambda sec grps.
+3. If you want private subnet Lambda to access internet, you can deploy and use NAT in a public subnet.
