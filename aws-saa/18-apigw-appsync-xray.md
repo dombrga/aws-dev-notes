@@ -14,3 +14,18 @@
    3. WebSocket api - invoked via frontend websocket.
 8. use case
    1. deploy restful api in front of amazon kinesis data streams for real-time ingestion.
+
+## api gw authentication and security
+1. resource policy to control which principal can call the api.
+   1. aws acct users, source ip range, vpc, vpce.
+2. authentication options
+   1. publicly accessible
+   2. iam roles/users
+   3. amazon cognito user pools
+   4. custom authorizer (aws lambda)
+3. api keys and usage plans
+   1. API keys - set of alphanumeric string to give customer to grant access to api.
+   2. usage plans
+4. You can use custom domain name to front api gw. Need tls cert from ACM for https.
+5. aws WAF to prevent sql inje and xss attacks.
+6. api gw allo mutual TLS support.
