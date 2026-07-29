@@ -38,3 +38,11 @@
 4. EventBridge Schedule
    1. Rate-based rate (12hrs)
    2. cron-based
+
+## eventbridge event bus types
+1. default event bus
+   - automatically receives events from aws svcs.
+2. custom event bus
+   - create new separate bus for custom workloads and systems.
+3. Partner event bus
+   - to receive events from partner Saas app and svcs.
