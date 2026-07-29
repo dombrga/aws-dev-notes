@@ -25,3 +25,16 @@
 5. Need to grant S3 permission to interact with sns, sqs, lambda, etc.
 6. EventBridge - great choice for when you need to trigger workflows using other aws services, to support more destinations besides the ones before. Destinations like SageMaker Pipeline or aws batch.
    1. S3 -> amazon sagemaker.
+
+## amazon EventBridge
+1. serverless event bus. Allows to pass events from source to an endpoint.
+2. Concepts
+   1. Events - recorded change in aws env, saas partner, or own app.
+   2. Rules - criteria to match incoming events to target. Based on event pattern or schedule.
+   3. Event Buses - router that receive and deliver events. Every account has a default bus.
+3. Trigger types
+   1. Event pattern - define an event source
+   2. Scheduled - schedule to trigger rule in eventbridge schedule.
+4. EventBridge Schedule
+   1. Rate-based rate (12hrs)
+   2. cron-based
