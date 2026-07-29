@@ -46,3 +46,11 @@
    - create new separate bus for custom workloads and systems.
 3. Partner event bus
    - to receive events from partner Saas app and svcs.
+
+## eventbridge events
+1. Event is a change in env in acct, partner svc, or custom app.
+2. JSON object.
+3. Archives - to create an archive of events to easily replay at a later time.
+4. Replays - specify what archive to use, start and end time for events to play.
+5. Sandbox - allows to experiment with creating event pattern matching. Allows to play with the svc.
+6. EventBridge schema - structure of event. Create own or aws default.
