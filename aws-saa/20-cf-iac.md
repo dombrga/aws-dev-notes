@@ -35,3 +35,18 @@
 3. permissions
    1. self-managed
    2. service-managed
+
+## aws cf change sets
+1. to preview how all proposed changes to existing stack might impact current resources.
+2. changes will only be made when you execute the change set.
+
+## cf custom resources
+1. write custom and complex logic not supported by built in resource types.
+2. example: executing db migration or init script after rds instance is created.
+
+## cfn-init
+1. helper script in cf that helps define init tasks.
+2. similar to user data in ec2 instance.
+3. defined in Metadata section of ec2 resource.
+4. allows to update ec2 instances in place.
+
