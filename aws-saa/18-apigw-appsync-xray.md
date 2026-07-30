@@ -28,4 +28,22 @@
    2. usage plans
 4. You can use custom domain name to front api gw. Need tls cert from ACM for https.
 5. aws WAF to prevent sql inje and xss attacks.
-6. api gw allo mutual TLS support.
+6. api gw allow mutual TLS support.
+
+## api gw integrations
+1. api gw can integrate with aws backend svcs.
+
+   ![api gw + lambda](./images/18/lambda.png)
+2. api gw stream data to ---> kinesis data stream ---> data firehose ---> S3
+   - Kinesis Data Streams is for when you want to control and manage the flow of data yourself, while Kinesis Data Firehose is for when you want the data to be automatically processed and delivered to a specific destination.
+
+   ![api gw + kinesis usage](./images/18/apigw-kinesis.png)
+3. can front svcs like ec2 or ALB
+
+   ![front](./images/18/others.png).
+
+## api gw deployments and stages
+1. create Deployment that is associated with a Stage.
+2. Stage is the snapshot of api methods, responses, integrations
+   - perform opti and customizations.
+3. caching, customize throttles, logging, enable canary testing.
