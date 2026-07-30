@@ -17,3 +17,15 @@
 6. some architecture
    1. Cognito user pools can be used as api gw authorizers.
    2. ALB can have an **authenticate-cognito** action configured to offload authn workloads to ALB instead of your app.
+
+## cognito identity pool
+1. give your users access to aws svcs via temp credentials.
+2. users authenticate via 3rd party IdPs or cognito user pools
+   - then leverages iam roles and policies to grant permissions to access aws resources.
+3. provide STS credentials for temp access.
+3. can assign single iam role for all authenticated users, or role based on user characteristics.
+   - like free users or premium users. Premium users can access more resources.
+   - guest access.
+4. architecture
+   1. an app authenticates with 3rd party IdP and receives token. Then Cognito validates token against the IdP and exchange for temp creds.
+5. Unauthenticated access - guest access. Not logged in. Best  to have assigned default role.
