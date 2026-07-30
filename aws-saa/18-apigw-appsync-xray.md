@@ -47,3 +47,19 @@
 2. Stage is the snapshot of api methods, responses, integrations
    - perform opti and customizations.
 3. caching, customize throttles, logging, enable canary testing.
+
+## aws AppSync
+1. serverless graphql interface.
+2. combines data from multiple sources like dynamodb, lambda
+3. support api keys, iam, cognito, oidc.
+4. js or ts for backend
+
+## debug app using aws x-ray
+1. service that collects data about reqs.
+2. Can view, filter and gain insights. can help in debugging, optimization.
+3. Can be used for observability and traceability.
+4. Can view calls to all downstream aws resources and other microsvc/APIs or db involve in req.
+5. commonly used with api gw and lambda.
+6. Can integrate with the ff
+   ![xray integ](./images/18/xray-integ.png)
+6.
