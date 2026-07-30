@@ -28,3 +28,10 @@
    - disabled by default
 2. Stack policy
    - prevent resource updates.
+
+## cf stack sets
+1. feature that enables you to create, update, delete stacks across multi accounts and regions.
+2. centrally manage stacks.
+3. permissions
+   1. self-managed
+   2. service-managed
