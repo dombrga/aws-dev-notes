@@ -114,3 +114,27 @@
 2. access policies.
 3. cross account msg publishing, specifying specific principals that can subscribe.
 4. ![sns policy example](./images/23/sns-policy.png)
+
+## sns topic
+1. 2 topic types
+   1. standard
+   2. fifo
+2. standard topic
+   - default option
+   - good enough for most infra and reqs
+   - 100k topics/acct
+   - 12,500,000 subsriptions/topic
+   - no msg archiving or replay
+   - highest throughput
+   - at least once delivery with best-effort ordering
+3. fifo
+   - best for special reqs.
+   - 1000 topics/acct
+   - 100 subsriptions/topic
+   - offers msg archiving an replay
+   - 300 msg/sec
+   - strict msg ordering and exactly-once delivery.
+   - **fifo topics can only send msg to sqs fifo queues**.
+4. SNS topics support cross-region and cross-acct.
+5. DLQ for failed delivery.
+6. Filter policies to define which msg a subscriber gets.
