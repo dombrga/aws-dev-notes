@@ -74,3 +74,9 @@
    - after this time, if the msg is not deleted, then msg will be visible again to other consumers.
    - default is 30 secs, minimum 0 secs, 12 hrs max.
    - good for long running tasks and retries.
+
+## example architectures
+1. ![scaling ASG](./images/23/scaling-asg.png)
+2. ![alt text](./images/23/asg-alarm.png)
+3. Idea is we can create cw alarm to monitor **ApproximateNumberOfMessages** metric. When there is a spike in msg, many msgs remain waiting.
+4. When alarm goes off, we can trigger auto scale action to the ASG.
