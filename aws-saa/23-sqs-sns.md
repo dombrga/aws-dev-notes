@@ -93,3 +93,24 @@
    1. useful for debugging apps and mssging systems by analyzing msg contents.
    2. to see if you have given consumers enough time to process msg. Related to visi timeout.
    3. Redrive - to send back to source queue or different queue to process.
+
+## Amazon SNS
+1. push-based. Producer push msg to a server and immediately sent to the consumers.
+2. push-based mssging svc.
+3. Proactively delivers msgs to the endpoints subscribed to it.
+4. useful for alerting systems or persons, and triggering event-driven workloads.
+5. can be **one-to-one** and **one-to-many**.
+6. producers send msg to a **topic**. Topic pushes msg to consumers.
+7. Consumers subscribe to an amazon sns topic to receive msgs.
+   - by default, all incoming msgs are sent to all confirmed subscriptions.
+8. Messages are encrypted in transit by default. You can add at test encryption via aws kms.
+9. Subscriber protocols
+   1. data firehose, email/email-json, sqs, lambda func, http/s endpts, SMS, platform app endpts.
+10. up to 256 kb size of msg.
+   - use amazon sns extended library to extend up to 2 gb.
+
+### securing sns
+1. aws iam
+2. access policies.
+3. cross account msg publishing, specifying specific principals that can subscribe.
+4. ![sns policy example](./images/23/sns-policy.png)
