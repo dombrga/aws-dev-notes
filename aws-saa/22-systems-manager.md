@@ -48,3 +48,13 @@
    - can create own.
    - create and shared docs.
 7. **Exam scenario:** Enforce compliance of ec2, use Automation to remediate
+
+## Run command
+1. allow you to remotely and securely manage managed nodes.
+2. automate common admin tasks and perform one-time config changes at scale.
+3. execute scripts, one time command.
+4. Connect via SSM agent.
+5. Concepts
+   1. Logging - commands logs can be saved to s3 and cw logs.
+   2. Trigger - console, sdk, cli, eventbridge.
+   3. Security - API activity is captured via AWS cloudtrail. Restrict access by iam.
