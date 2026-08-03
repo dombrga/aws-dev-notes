@@ -50,3 +50,10 @@
 3. defined in Metadata section of ec2 resource.
 4. allows to update ec2 instances in place.
 
+## aws service catalog
+1. to create ang manage catalogs of IT services deemed to be approved for use within aws.
+2. deploy pre-approved catalog items (cf templates)
+
+## aws proton
+1. automate iac provisioning and deployment.
+2. define standardized infra for serverless and container-based apps.
