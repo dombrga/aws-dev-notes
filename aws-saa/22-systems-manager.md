@@ -29,3 +29,22 @@
 2. Maintenenace Windows
    - define schedule for performing possibly disruptive actions on managed instances.
    - supports s3, sqs, opensearch service, but mostly for ec2.
+
+## automation and documents
+1. tool that simplifies common maintenance and remediation tasks.
+2. supports ec2, rd2, s3, more.
+3. Create own or use predefined automations.
+4. Automation - tasks defined in a runbook performed Automation service.
+   1. disable public access for sec grps
+   2. restarting ec2 w/wo approval
+5. Triggering automation
+   1. Schedule using Maintenance Windows
+   2. via EventBridge.
+   3. works with AWS Config rule remediations.
+   4. manually trigger in console or cli.
+6. aws sm Documents
+   - allows you to define actions that Systems Manager performs on managed instances.
+   - there are owned by Amazon, not customizable.
+   - can create own.
+   - create and shared docs.
+7. **Exam scenario:** Enforce compliance of ec2, use Automation to remediate
