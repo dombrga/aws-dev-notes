@@ -58,3 +58,21 @@
    1. Logging - commands logs can be saved to s3 and cw logs.
    2. Trigger - console, sdk, cli, eventbridge.
    3. Security - API activity is captured via AWS cloudtrail. Restrict access by iam.
+
+## Parameter Store
+1. for secure, hierarchical storage for config data and secrets.
+2. easily reference in scripts, ssm docs, automations.
+3. granular access with iam.
+4. no automatic rotation.
+5. more cost efficient than Secrets Manager.
+6. use case
+   1. passwords
+   2. username
+   3. ami id
+   4. license codes
+   5. app config data
+7. Parameter types
+   1. String - any text. Username, html code, base64 encoded strings.
+   2. StringList - comma-separated list of values. White listed IPs, account ids
+   3. SecureString - data that needs to be encrypted. Integration with KMS. Common to be used with db password.
+8. When using SecureString or path-based params, ensure you have correct IAM permissions.
