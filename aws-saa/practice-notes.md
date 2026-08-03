@@ -3,3 +3,4 @@
 3. meta-data/ to access ec2 instance metadata.
 4. Resource policy - you attach to the resource being accessed.
 5. If you want to minimize maintenance and patching, consider Serverless architecture and svcs.
+6. When there is **Principal** in the policy, it is a resource-based policy.
