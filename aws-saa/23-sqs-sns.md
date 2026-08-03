@@ -138,3 +138,14 @@
 4. SNS topics support cross-region and cross-acct.
 5. DLQ for failed delivery.
 6. Filter policies to define which msg a subscriber gets.
+
+## fanning out with sns and sqs
+### sns fanout
+1. multiple subscribers on the same topic so that msgs are sent to multiple endpts at the same time.
+2. allows for fully decoupled, parallel, async processing.
+   - allows to process same msg differently based on endpts subscribed, like online ordering system.
+3. process msg independently.
+3. sns fanout pattern archi.
+   1. ![fanout 1](./images/23/1-fanout.png)
+   2. ![fanout 2](./images/23/2-fanout.png)
+4. S3 events can be sent to sns topic.E
