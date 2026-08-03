@@ -14,3 +14,18 @@
    4. parameter store
    5. maintenance windows
    6. session manager.
+
+## Patch manager and maintenance windows
+1. Patch manager
+   - automate patching of managed instances.
+   - OS and app patches.
+   - supports Windows.
+   - supports Linux.
+   - ec2 instances, edge devicesm onprem, VMs
+   - **patch policies**, and **patch baselines** to config patching rules.
+   - **Scan** and **Scan and install** patching ops.
+   - offers predefined and custom patch baselines.
+   - **Exam scenario:** If need to automate OS updates and scan for patch compliance of fleet of thousands of windows and linux ec2 instances, think of Patch Manager.
+2. Maintenenace Windows
+   - define schedule for performing possibly disruptive actions on managed instances.
+   - supports s3, sqs, opensearch service, but mostly for ec2.
