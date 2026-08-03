@@ -80,3 +80,16 @@
 2. ![alt text](./images/23/asg-alarm.png)
 3. Idea is we can create cw alarm to monitor **ApproximateNumberOfMessages** metric. When there is a spike in msg, many msgs remain waiting.
 4. When alarm goes off, we can trigger auto scale action to the ASG.
+
+## sqs dead-letter queues (DLQ)
+1. Once in a while, you will experience processing failure of msgs.
+2. DLQ are targets for msgs that cannot be processed successfully.
+3. DLT is set as target when configuring source queues.
+4. DLQ msgs can be used for further processing and investigation later on.
+5. DLQ is fifo is queue is fifo.
+6. can work with sqs and sns.
+7. dlq is just standard fifo under the hood.
+8. use cases
+   1. useful for debugging apps and mssging systems by analyzing msg contents.
+   2. to see if you have given consumers enough time to process msg. Related to visi timeout.
+   3. Redrive - to send back to source queue or different queue to process.
