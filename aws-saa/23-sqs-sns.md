@@ -46,7 +46,7 @@
    3. have an at-least-once msg delivery, so need to handle duplicates or use FIFO type.
    4. not guaranteed to be delivered in order.
    5. msgs are stord in multi AZ.
-   6. max msg size 256 kb. Can be bypassed.
+   6. max msg size **256 kb**. Can be bypassed by using **amazon sqs extended client library**.
 3. FIFO
    1. with more opts than standard.
    2. dont support same # of msgs as standard.
@@ -55,5 +55,22 @@
    4. Message deduplication ID is used to prevent dupli.
    5. message group ID to maintain msg order.
 4. FIFO throughput
-   1. can send up to 300 msg/sec without msg batching
-   2. 3000 msg/sec with batching.
+   1. can send up to **300 msg/sec** without msg batching
+   2. **3000 msg/sec** with batching.
+
+## sqs queue attributes
+1. Delivery delay/message timer
+   - delay delivery of new msg for a specified # of secs. Default is 0.
+2. Message retention
+   - amount of time msg stays in the queue not being pulled off. Default is 4 days. Up to 14 days.
+3. Short polling
+   - default option where ReceiveMessage do not wait to poll queues. Common cause of empty msg and increases costs.
+4. Long-polling
+   - help reduce # of api calls and empty responses
+   - max time is 20 secs.
+5. Favor long polling over short polling.
+6. Visibility Timeout
+   - length time during which received msg is hidden from other consumers.
+   - after this time, if the msg is not deleted, then msg will be visible again to other consumers.
+   - default is 30 secs, minimum 0 secs, 12 hrs max.
+   - good for long running tasks and retries.
