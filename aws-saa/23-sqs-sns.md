@@ -35,3 +35,25 @@
    2. server side encryption to protect data in msgs. SSE-QS of kms.
    3. sqs is public svc. Important to implement correct iam policies and to restrict access via vpc endpts.
 9. Best practice is to have separate queues for separate functions in a workflow.
+
+## sqs queue
+1. 2 types
+   1. Standard
+   2. FIFO
+2. Standard
+   1. default option
+   2. supporting nearly unlimited # of api calls/msgs.
+   3. have an at-least-once msg delivery, so need to handle duplicates or use FIFO type.
+   4. not guaranteed to be delivered in order.
+   5. msgs are stord in multi AZ.
+   6. max msg size 256 kb. Can be bypassed.
+3. FIFO
+   1. with more opts than standard.
+   2. dont support same # of msgs as standard.
+   2. use if order of operation is critical or duplicate is not tolerated.
+   3. exactly-once processing.
+   4. Message deduplication ID is used to prevent dupli.
+   5. message group ID to maintain msg order.
+4. FIFO throughput
+   1. can send up to 300 msg/sec without msg batching
+   2. 3000 msg/sec with batching.
