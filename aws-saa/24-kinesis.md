@@ -88,4 +88,20 @@
 3. can send several formats like json, parquet, text, binary data.
    1. leverage converting parquet and orc formats.
    2. compressing delivered records via gzip and snappy.
-4.
+
+## amazon kinesis data analytics (for sql applications)
+1. easily process and analyze streaming data using sql.
+2. app read and process streaming data in realtime.
+3. perform conversions, tranformations, etc using lambda func.
+4. sources
+   1. kinesis data stream
+   2. firehose stream
+5. destinations
+   1. 1. kinesis data stream
+   2. firehose stream
+   3. lambda func.
+6. deprected soon.
+
+## amazon kinesis video streams
+1. managed svc to stream and store live video from devices to aws.
+2. for realtime video processing for video analytics.
