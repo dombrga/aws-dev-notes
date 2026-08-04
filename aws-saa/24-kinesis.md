@@ -45,3 +45,14 @@
    - high performance.
    - incur addtl cost.
    - **to scale consumers of kds.**
+
+### capacity modes
+1. data stream capacity is the config to set how much data a stream managers and and can handle.
+2. charged based on capacity
+3. options
+   1. on-demand
+      - dont worry about planning. Auto scales and manages your shards.
+      - for highly variable and unpredictable traffic.
+   2. provisioned
+      - set # of shards you want.
+      - manually incr or decr # of shards.
