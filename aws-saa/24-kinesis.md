@@ -59,7 +59,7 @@
 
 ## amazon data firehose (dfh)
 1. **near realtime**, managed, serverless data streaming solution.
-2. producers send data to a stream and it auto sends it to configured destination.
+2. producers send data to a stream and it auto sends it to a configured destination. **Only 1 destination is allowed**, unlike kds..
 3. commonly used to send ingested data to
    1. s3
    2. redshift table
@@ -68,3 +68,24 @@
 4. Amazon Kinesis agent - java app that sends data to fh stream.
 5. allows for data transformation mid-flight via lambda.
 6. only pay for what you use.
+
+### firehose streams
+1. what makes svc run.
+2. where data lives, for sending data to.
+3. 3 sources for fh streams
+   1. Direct PUT - producer apps write directly to the stream using PUT cmds. Svcs include aws sdk, cw, sns, aws iot, kinesis agent.
+   2. amazon kds - ![kds and dfh](./images/24/kds-dfh.png).
+   3. amazon managed streaming for apache kafka (msk) - reads directly from kafka cluster.
+4. sample dfh s3 scenario - ![dfh-s3](./images/24/dfh-s3.png)
+5. sample dfh lambda scenario - ![dfh-lambda](./images/24/dfh-lambda.png)
+
+### records and buffers
+1. records <= 1000 kb
+2. incoming data is buffered before being sent to desti.
+   1. buffer size
+   2. buffer interval
+   3. data is sent when either of above is triggered.
+3. can send several formats like json, parquet, text, binary data.
+   1. leverage converting parquet and orc formats.
+   2. compressing delivered records via gzip and snappy.
+4.
