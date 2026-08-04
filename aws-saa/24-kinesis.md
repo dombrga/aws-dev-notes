@@ -9,7 +9,7 @@
    4. kinesis video streams
 5. For realtime or near realtime streaming.
 
-## amazon kinesis data streams
+## amazon kinesis data streams (kds)
 1. **realtime streaming** of incoming data.
 2. apps called consumers read data records from the streams.
 3. perfect for large amounts of fast data ingestion.
@@ -27,3 +27,21 @@
 8. Replay - msgs do not go away until they expire, even when they get consumed. Allows for multiple consumers to replay same data records in same order.
 9.  supports encryption within data streams using aws kms keys.
 10. ![data streams archi sample](./images/24/data-stream-archi.png)
+
+### producing and consuming data
+1. Producers will use amazon kinesis producer library (KPL).
+   - meant to make ingesting data simpler
+   - handles aggregation, metric collection, retries.
+   - not same as kinesis data streams api.
+   - perfect for ec2 writing thousands of events/sec.
+2. Consumers will use kinesis client library (KCL).
+   - standalone java lib.
+   - simplify consuming and proce data from kds.
+   - offers load balancing across multiple workers, handles failures, responds to changes in # of shards, etc.
+3. aws sdk for java is less popular option.
+4. Enhanced Fan-out
+   - makes kds push-based.
+   - allows data to immediately get pushed to all consumers once it is ready on the data stream.
+   - high performance.
+   - incur addtl cost.
+   - **to scale consumers of kds.**
