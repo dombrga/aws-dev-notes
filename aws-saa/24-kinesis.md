@@ -56,3 +56,15 @@
    2. provisioned
       - set # of shards you want.
       - manually incr or decr # of shards.
+
+## amazon data firehose (dfh)
+1. **near realtime**, managed, serverless data streaming solution.
+2. producers send data to a stream and it auto sends it to configured destination.
+3. commonly used to send ingested data to
+   1. s3
+   2. redshift table
+   3. amazon opensearch service and serverless
+   4. supported 3rd party providers like datadog, elastic, etc.
+4. Amazon Kinesis agent - java app that sends data to fh stream.
+5. allows for data transformation mid-flight via lambda.
+6. only pay for what you use.
