@@ -36,3 +36,28 @@
 2. **Viewer protocol policy** - protocol policy that tells whether to use http/https to access content.
 3. you can require **https**.
 4. custom dns tls with ACM.
+
+### cloudfront functions and Lambda@Edge functions
+1. Four portions of request and response
+   1. viewer request
+   2. viewer response
+   3. origin request
+   4. origin response
+2. Custom processing at the edge via edge functions
+   1. cf functions
+      - managed within cf svc
+      - support javascript only
+      - perfect for high-scale latency-sensitive cdn custom reqs
+      - only work at viewer request and response
+   2. lambda@edge functions
+      - managed with lambda svc
+      - support nodejs, python
+      - must be deployed to us-east-1
+      - work at all 4, viewer and origin request and response.
+      - supports thousands of req/sec can run up to 10 secs
+   3. use cases
+      - basic authn and authz closer to users
+      - customize content based on uesr loc, device, preferences
+      - serve diff versions of website to test user engagement
+      - optimize content delivery by compressing files
+      - add security headers or enforce https
