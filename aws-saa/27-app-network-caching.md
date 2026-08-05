@@ -30,3 +30,9 @@
 6. **Georestriction/geoblocking** - prevent users from some geographic locations.
    - allow list or block list.
    - country based restrictions
+
+### cloudfront custom domain name and TLS
+1. when you create a distribution, you are given an aws-provided URL.
+2. **Viewer protocol policy** - protocol policy that tells whether to use http/https to access content.
+3. you can require **https**.
+4. custom dns tls with ACM.
