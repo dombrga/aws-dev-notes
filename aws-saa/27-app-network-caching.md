@@ -83,3 +83,18 @@
 4. alb/nlb/ec2 is reachable by internet traffic.
 5. must have igw in place for your vpc.
 6. security group still apply.
+
+## amazon elasticache
+1. managed distributed in-memory caching svc
+   1. memcached
+   2. redis
+   3. valkey
+2. helps meet high perf, low latancy app reqs.
+3. great for heavy and repeated read reqs.
+4. requires changes to code.
+5. use cases
+   1. case db result, session data, api resp
+   2. session stores
+   3. online gaming leaderboards.
+6. memcache has no data tiering, HA, auto failover. Limited backup support.
+7. redis and valkey - for more complex reqs
