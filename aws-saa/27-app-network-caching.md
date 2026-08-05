@@ -61,3 +61,25 @@
       - serve diff versions of website to test user engagement
       - optimize content delivery by compressing files
       - add security headers or enforce https
+
+## aws global accelerator
+1. networking svc that send traffic thru aws global network infra via accelerators that send traffic to endpts.
+2. you get assigned 2 static anycast ip addr.
+3. increase perf and decrease latency
+4. ip caching and whitelisting
+5. meant for tcp or udp traffic.
+6. great for static ip reqs.
+7. supported endpt resources
+   1. elastic IPs
+   2. ec2
+   3. ALBs - public or private
+   4. NLBs
+8. ![global-accel-archi](./images/27/global-accel-archi.png)
+
+### security and health checks
+1. standard accel auto performs health checks.
+2. traffic sent only to healthy endpts.
+3. leverages route 53 health checks
+4. alb/nlb/ec2 is reachable by internet traffic.
+5. must have igw in place for your vpc.
+6. security group still apply.
