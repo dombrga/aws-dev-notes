@@ -40,3 +40,34 @@
       - run up to 5 mins.
       - high event rate workloads
       - billed on # of executions, total duration, memory consumed.
+
+## aws batch
+1. fully managed batch processing svc.
+2. run batch computing workloads on ec2 (ondemand, spot), ecs/fargate.
+3. auto launches required compute.
+4. submit jobs as needed, or schedule them.
+
+### concepts
+1. Jobs - unit of work submitted to aws batch.
+   1. shell scripts
+   2. exec
+   3. docker images
+2. job definitions - specifies how jobs are to be run.
+3. Job queues - jobs get submitted to specific queues.
+4. compute environment
+5. Managed compute env
+   1. aws manages capacity and instance types
+   2. compute resources specs are defined
+   3. launched into vpc subnets
+   4. leverage fargate, fargate spot, spot
+6. Unmanaged compute env
+   1. you manage
+   2. meet ecs ami specs
+   3. less common
+### compute env
+1. fargate
+   1. recommended for most workloads
+   2. for fast start times
+2. ec2
+   1. need control over instance selection
+   2. custom ami
