@@ -28,3 +28,27 @@
    1. automated - upload scripts or built in test
    2. remote access - swipe, gesture, interact with devices realtime in browser.
 4. **exam indicators:** anything that requires app testing on mobile dvcs in aws. Especially needing mobile or tablet for automated testing.
+
+## aws wavelength
+1. build apps that require edge computing infra to deliver low latency to mobile dvcs and end users.
+2. leverages 5g.
+3. specific 5g networking reqs.
+4. increase resiliency of edge apps.
+
+## amazon appflow
+1. fully managed integration svc for securely exchanging data between saas and aws.
+2. like, salesforce to s3.
+3. zendesk, servicenow
+4. destinations
+   1. s3
+   2. redshift
+   3. etc
+
+## amazon simple email service (SES)
+1. aws svc for email platform to send and receive email.
+2. allow own email addr and domains.
+3. large scale email soln
+4. DKIM support
+5. send email from anything that can amke API call to SES.
+6. provide stats about bounces, complaints, successful deliveries.
+7. hard to setup?
