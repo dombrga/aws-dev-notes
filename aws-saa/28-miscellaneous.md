@@ -20,3 +20,11 @@
 6. supports spa frameworks: vue, react, angular etc
 7. supports ssg: gatsby, hugo, eleventsy, jekyll, vuepress, etc
 8. **consider for anything managed SSR, easy mobile dev, running full stack app.**
+
+## aws device farm
+1. app testing svc for testing ang interacting with android, ios and web apps.
+2. usable on actual phones and tablets.
+3. 2 primary testing methods
+   1. automated - upload scripts or built in test
+   2. remote access - swipe, gesture, interact with devices realtime in browser.
+4. **exam indicators:** anything that requires app testing on mobile dvcs in aws. Especially needing mobile or tablet for automated testing.
