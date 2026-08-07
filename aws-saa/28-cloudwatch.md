@@ -101,3 +101,29 @@
    - perform ec2 scaling action
    - creating OpsItem
    - creating incident in Systems Manager
+
+### cw insights
+4 types
+1. Container insights
+   - collect, aggregate, summarize metrics and logs from containerized apps
+   - ecs, eks, fargate, kubernetes on ec2
+2. Application insights
+   - collection of insights in addition to native cw offer by allows more observability
+   - powered by sagemaker
+   - helps lower time to troubleshoot across entire tech stack
+   - generate eventbridge events
+   - work with other resources outside of container insights
+     - ec2, rds, ELBs, sqs, api gw
+   - has more resource support than container insights.
+3. lambda insights
+   - specific for lambda
+   - system-level metrics like cpu time, memory disk, network
+   - cold starts, lambda workder shutdown
+   - uses the cw lambda extension.
+4. Contributor insights
+   - to analyze log data from apps and create time series that display contributor data
+   - top-N contributors
+   - total # of unique contrib
+   - use case: identify bad hosts, heaviest network users
+   - you create rules to define contributors. These rules analyze logs in realtime.
+   - api gw logs, route 53 dns query logs, etc.
