@@ -7,3 +7,4 @@
 7. ![vpc-peering](./images/labs/vpc-peering.png)
 8. ![securecontainer deployment on ecs fargate](./images/labs/secure-container-ecs-fargate.png)
 9. almost always, cloudfront is used to front S3.
+10. IGE is bidirectional, NAT gw is only outbound.
