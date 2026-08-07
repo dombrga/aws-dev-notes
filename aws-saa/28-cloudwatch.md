@@ -1,4 +1,4 @@
-## amazon cloudwatch logs
+# amazon cloudwatch logs
 1. allows to monitor, store, access log files from diff sources.
 2. can query logs for investigation.
 3. logs are encrypted by default. Can use kms.
@@ -38,3 +38,21 @@
    - bucket can be in the same acct or diff acct
    - export logs can take up to 12 hrs, not realtime.
 10. **Log Groups are regional resources**.
+
+### custom logging with cw logs agent
+1. apps in ec2 do not log by default to cw logs.
+2. But this can change by installing and using cw logs agent.
+   1. collect ec2/onprem system-level metrics.
+   2. retrieve custom metrics from **statd** or **collectd**.
+   3. collect logs from ec2/onprem
+3. need proper IAM permissions so agent can push to cw logs.
+4. **CW logs unified agent (cwlua)** is the updated version of cw agent.
+   - supports more colection options (metrics, log locations, etc), more destis now just cw.
+5. Default metrics
+   1. disk consump
+   2. cpu usage
+6. Agent supported metrics
+7. ![ec2 default and agent metrics](./images/28/ec2-diff-agent.png)
+8. exam scenario
+   1. you can use Systerms Manager automation to install cwlua.
+   2. you can automate export logs to s3 using lambda.
