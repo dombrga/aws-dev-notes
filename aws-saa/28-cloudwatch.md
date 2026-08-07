@@ -77,3 +77,27 @@
    - near realtime deliv with low latency.
    - commonly streamed to s3
    - supports some 3rd party svcs.
+
+### cw alarms
+1. you want to setup observability and alarms when something goes wrong in your app.
+2. **Alarms** watch a metric in a given time period and change state based on threshold.
+3. 2 types of alarm
+   1. Metric alarm
+      - watch a single cw metric
+      - watch result of a math expression of cw metrics
+      - perform 1 or more actions
+   2. composite alarm
+      - monitor alarm states of multiple other alarms
+      - using AND/OR logic
+      - prevent false alerts
+      - INSUFFUCIENT_DATA - not enough data state
+      - OK - not breached state
+      - ALARM - breached state
+4. you can trigger actions in any state.
+5. **Exam pro tip:** you can use Metric filter to create custom cw alarm.
+6. important Alarm actions
+   - sent notif to sns topic - to alert a team, etc
+   - perforn ec2 action
+   - perform ec2 scaling action
+   - creating OpsItem
+   - creating incident in Systems Manager
