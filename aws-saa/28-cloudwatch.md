@@ -56,3 +56,24 @@
 8. exam scenario
    1. you can use Systerms Manager automation to install cwlua.
    2. you can automate export logs to s3 using lambda.
+
+### cw metrics
+1. cw does both logging and observability using metrics.
+2. **Metrics** are regional.
+   - time-ordered sets of data pts published to cw.
+    - most aws svcs provide free metrics, like cpu usage in ec2.
+    - by default, they come in at 5 min interval.
+    - you can enable **detailed monitoring** for faster interval.
+    - can publish own metrics using agent.
+    - can create and share dashboards.
+3. CW metrics concept
+   1. **Namespace** - containers meant to grp and isolate common metrics.
+   2. **Timestamp** - associated to each metric data pt.
+   3. **Dimensions** - name/value pair to identify the metric.
+4. **Detailed monitoring** - only works for certain aws resources. Incurs addtl cost.
+   - for ec2, can gather metrics in 1 min interval.
+5. Metric Streams
+   - to continually stream cw metrics to destis.
+   - near realtime deliv with low latency.
+   - commonly streamed to s3
+   - supports some 3rd party svcs.
