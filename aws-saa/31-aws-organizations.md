@@ -59,3 +59,22 @@
    2. impact root user within member accts
    3. **exam pro tip:** if you need to restrict root user actions in member accts, think SCPs.
    4. ![scp](./images/31/scp.png)
+
+# aws control tower
+1. svc that provides simplified quick way to set up and govern aws multi-acct env based on best practices.
+2. uses and extends aws org
+   1. automate acct creation
+   2. implement secu control
+   3. prevent governance drift
+## concepts
+1. Landing zone
+   - well-architected multi-acct env for all your aws resources
+2. shared accts
+3. Controls (guardrails)
+   - applied mandatory preventive controls and detective controls
+4. 2 types of control
+   1. **Preventative** - implemented using SCPs
+   2. **Detective** - implemented using AWS config rules.
+      - can use this detective controls to trigger remediation.
+5. Preventative prevents, Detective detects.
+6. aws control tower account factory - repeatable deployment of new accts.
