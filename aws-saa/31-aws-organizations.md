@@ -48,3 +48,14 @@
    - create new acct and reset quota
 2. you can enable organiztaional cloudtrail trail for centralized logging.
 3. implement logging/security acct for hosting centralized cw logs in s3.
+
+# Service Control policies (SCP)
+1. json policies applied to accts and OUs to restrict actions for user and roles.
+2. do not grant permissions, just dictate permissions that can be granted via aws iam.
+3. **default behavior is deny all actions**, like aws iam.
+4. default policy is FullAWSAccess policy.
+5. two important concepts
+   1. SCPs do not impact management acct.
+   2. impact root user within member accts
+   3. **exam pro tip:** if you need to restrict root user actions in member accts, think SCPs.
+   4. ![scp](./images/31/scp.png)
