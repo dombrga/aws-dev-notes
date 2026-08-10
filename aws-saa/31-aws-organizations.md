@@ -78,3 +78,14 @@
       - can use this detective controls to trigger remediation.
 5. Preventative prevents, Detective detects.
 6. aws control tower account factory - repeatable deployment of new accts.
+
+# aws resource access manager
+1. free svc that allows ot share resources with other accts without creating duplicates.
+2. member accts in org or external accts.
+3. commonly shared resources
+   1. transit gw
+   2. vpc subnets and sec grps
+   3. aws network firewall policies and rules
+   4. route 53 resolver rules
+   5. vpc customer managed prefix lists
+4. Member accts of external acct will be able to access resources.
