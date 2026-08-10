@@ -5,7 +5,7 @@
    2. acct per department (hr, billing, security)
 3. benefits
    1. stricter controls for security and compliance.
-   2. isolate workloads and reduce blast radius.
+   2. isolate workloads and reduce blast radius reduction.
    3. billing separation
 4. how to manage multiple accts at scale? **AWS Organizations**!
 
