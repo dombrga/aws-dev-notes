@@ -88,3 +88,21 @@
    4. fault tolerance
    5. service limits - usage of entire acct
    6. operational excellence - operate much more effectively and at scale. Using asg, global accelerator, etc.
+
+# amazon inspector
+1. automated security assessment svc.
+2. helps improve security and compliance of apps deployed to aws.
+3. like sonarqube? sast dast?
+4. after performing an assessment, amazon Inspector produces security findings with levels of severity.
+5. findings can be sent to EventBridge.
+6. Scan types
+   1. agent-based - use ssm agent to continuously scan instances.
+   2. agentless - scans ebs snapshot to collect software inventory.
+7. amazon ec2
+   - use ssm agent.
+   - collect software inventory and look for package vulnerabilities.
+   - will look for potential network reachability vulnerability
+8. ecr images
+9. aws lambda
+   - can scan lambda
+10. **exam pro tip:** think amazon inspector if you need regular security scans on ec2 or lambda funcs
