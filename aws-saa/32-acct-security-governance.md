@@ -55,3 +55,18 @@
    3. **s3-bucket-server-side-encryption-enabled** - check s3 bucket has default encryption enabled or denies PutObject calls without encryption.
    4. **cloudtrail-security-trail-enabled**
 10. can use aws Config to evaluate tagging compliance for resources.
+
+## aws config rule and remediation
+1. compliance check helping you manage your ideal config settings which then evaluates compliance status.
+2. two offerings
+   1. aws managed rules
+   2. custom rules
+3. rules can be triggered based on config changes, or scheduled.
+4. custom rules can leverage lambda or Guard to perform evaluation.
+5. can perform remediations with retries
+6. remediations are done via **aws systems manager automation documents**
+7. Aws config is never free.
+8. aws config rule notif destination
+   1. eventbridge to trigger workloads
+   2. send updated config details to s3
+   3. sns
