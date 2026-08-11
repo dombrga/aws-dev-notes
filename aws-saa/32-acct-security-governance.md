@@ -129,3 +129,10 @@
    2. s3
    3. lambda and eks
 11. **exam pro tip:** it is common to set up a delegated admin acct for amazon guardduty for centralized reporting.
+
+# amazon macie
+1. managed data security and privacy svc to identify PII and sensitive data in S3.
+2. uses ML.
+3. can alert you via sns and trigger worloads.
+4. works with eventbridge.
+5. great for trying to meet compliane frameworks like hipaa, pci, gdpr.
