@@ -147,3 +147,8 @@
 3. perfect for centralizing findigs for
    1. NIST
    2. PCI DSS
+
+# aws audit manager
+1. managed svc to continually audit aws usage to make sure to stay compliant with industry standards and regulations.
+2. produces reports for pci, gdpr compliances, etc.
+3. **exam indicator:** hipaa or gdpr compliance, asking about continuous auditing or auditing reports.
