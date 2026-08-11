@@ -105,4 +105,27 @@
 8. ecr images
 9. aws lambda
    - can scan lambda
-10. **exam pro tip:** think amazon inspector if you need regular security scans on ec2 or lambda funcs
+10. **exam pro tip:** think amazon inspector if you need regular security scans on ec2 or lambda funcs.
+
+# Amazon GuardDuty
+1. managed threat detection svc or IDS.
+2. Uses ML to detect malicious behavior.
+3. not intrusion prevention svc, but ids.
+4. example
+   1. detect unusual api calls from malicious IP
+   2. compromised instance
+   3. port scanning
+   4. unauthorized cryptomining activity
+5. does not require installation of any software or agent.
+6. offers free trial for 30 days. Can be expensive.
+7. alerts appear in GuardDuty console and EventBridge.
+8. updates its db of known malicious domains using external feeds.
+9. foundational data sources
+   1. cloudtrail logs
+   2. vpc flow logs
+   3. route53 resolver dns query logs
+10. extended sources
+   1. rds/aurora
+   2. s3
+   3. lambda and eks
+11. **exam pro tip:** it is common to set up a delegated admin acct for amazon guardduty for centralized reporting.
