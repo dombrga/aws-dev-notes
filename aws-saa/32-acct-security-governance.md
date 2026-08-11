@@ -37,3 +37,21 @@
 10. get one free trail per region.
 11. exam scenario
     - ![cloudtrail-scenario](./images/32/ct-scenario.png)
+
+# aws Config
+1. inventogy mnagement and control tool that allows you to view the config history of your infra over time.
+2. offer the ability to create rules to make sure resources conform to your reqs.
+3. configured per region.
+4. can receive alerts via sns when changes in compliance occur.
+5. works with aws organization.
+6. can store config data in s3.
+7. aws Config Status
+   1. COMPLIANT
+   2. NON_COMPLIANT
+8. **AWS Config is a reactive svc, not proactive.** Does not prevent changes.
+9. commonuse cases
+   1. **restricted-ssh** - make sure incoming ssh traffic for sec grps is accessible to a restricted CIDR, not open to the internet.
+   2. **ec2-ebs-encryption-by-default** - check ebs encryption is on
+   3. **s3-bucket-server-side-encryption-enabled** - check s3 bucket has default encryption enabled or denies PutObject calls without encryption.
+   4. **cloudtrail-security-trail-enabled**
+10. can use aws Config to evaluate tagging compliance for resources.
