@@ -70,3 +70,21 @@
    1. eventbridge to trigger workloads
    2. send updated config details to s3
    3. sns
+
+# aws truster advisor
+1. fully managede best-practice auditing tool for aws accts.
+2. account level.
+3. requires no agent installed.
+4. uses industry and customer-established best practices.
+5. inspects aws environments and makes recomm
+   1. save money
+   2. system availability
+   3. system performance
+   4. close potential secu gaps.
+6. Check Categories
+   1. cost optimi - make recomm on where you can save money
+   2. performace - how to improve speed? Scale?
+   3. security
+   4. fault tolerance
+   5. service limits - usage of entire acct
+   6. operational excellence - operate much more effectively and at scale. Using asg, global accelerator, etc.
