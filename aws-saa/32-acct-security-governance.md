@@ -136,3 +136,14 @@
 3. can alert you via sns and trigger worloads.
 4. works with eventbridge.
 5. great for trying to meet compliane frameworks like hipaa, pci, gdpr.
+
+# aws security hub
+1. single place to view all security alerts
+   1. guardduty
+   2. inspector
+   3. macie
+   4. firewall manager
+2. aggregates across multiple accts in an org via delegated admin member acct.
+3. perfect for centralizing findigs for
+   1. NIST
+   2. PCI DSS
