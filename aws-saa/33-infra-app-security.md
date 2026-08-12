@@ -96,3 +96,15 @@
 3. acts like you have same key everywhere.
 4. seamless encryption and decryption across aws regions.
 5. still regional, not global resource.
+
+# aws CloudHSM
+1. hardware security module is a computing device that processes cryptographic operations and provide secure storage for cryptographic keys.
+2. when kms encryption is not enough
+3. cloudhsm is aws-based hsm to generate your own encryption keys on aws cloud.
+4. physical dvc dedicated to you.
+5. low latency access and secure hsm management.
+6. exam indicators
+   1. need full ctrl of underlying cryptographic hardware
+   2. need full ctrl of users, grps, keys
+   3. aws kms is not enough.
+7. perfect for strictest req.
