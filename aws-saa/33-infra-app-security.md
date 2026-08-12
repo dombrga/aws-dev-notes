@@ -89,3 +89,10 @@
    - key policies for primary permissions, then grants temporarily allow permissions be delegated from authzed principals.
    - commonly used by aws svcs.
 4. ![sample-key-policy](./images/33/key-policy1.png)
+
+## aws kms multi-region keys
+1. kms keys are regional resources.
+2. multi-region key uses same key material and key id.
+3. acts like you have same key everywhere.
+4. seamless encryption and decryption across aws regions.
+5. still regional, not global resource.
