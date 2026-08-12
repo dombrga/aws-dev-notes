@@ -108,3 +108,20 @@
    2. need full ctrl of users, grps, keys
    3. aws kms is not enough.
 7. perfect for strictest req.
+
+# aws secrets manager
+1. svc that securely stores, encrypts, rotates secrets.
+2. offers encryption in transit via tls and encryption at rest using kms keys.
+3. can enable auto credential.
+4. fine-grained access control using iam policies.
+5. never free
+6. concept
+   1. enable app to make api calls to secrets mngr to retrieve secrets programatically. Requires iam permission.
+   2. commonly used for rds/aurora admin creds.
+   3. can store any other secret, as key value pair.
+   4. leverages lambda func to generate new secrets when performing rotation.
+7. multi-region secrets
+   1. allows to replicate across aws regions.
+   2. can promote replica to a standalone secret.
+   3. good for multi-region db implem.
+   4. good for failovers
