@@ -32,3 +32,41 @@
 1. regional resources require acm certs in the same region.
 2. global resources need acm in us-east-1.
    - edge-optimized gw and cf need an acm cert in us-east-1.
+
+# aws key management service (kms)
+1. managed svc to create and control encryption keys to encrypt data.
+2. protected by fips 140-3 security level 3 hardware security modules.
+3. integrates with many aws svcs.
+4. track kms key usage with ct trails.
+5. control access via iam and key policies.
+6. leverage vpc endpts for secure access.
+
+## aws kms keys
+1. regional key to be used in your own apps.
+2. Key material origin
+   - source of the key material in your kms key.
+   - cannot be chaned once chosen.
+3. origin
+   1. aws kms - aws creates the key for you. Easiest.
+   2. custom key store- key material is generated and used in aws cloudhsm cluster.
+   3. imported - import key material from own key mgmt infra
+4. kms keys never leave the aws kms service.
+
+### 3 high level key types
+1. customer managed
+   - you create, own and manage. You have full control.
+   - you create and maintain key policies and iam policies.
+   - can enable and disable key.
+   - can enable auto rotation of key material. Or manually rotate.
+   - schedule deletion of keys with 7-30 day waiting period.
+   - never free. Pa per use and a monthly fee per key
+2. aws owned
+   - kms key that aws svc owns and manages for use in multiple aws accts.
+   - perfect if you do not need to audit or control the key
+   - free of charge. Rotation and deletiongs are managed.
+3. aws managed
+   - legacy, replaced by the similar aws owned.
+   - can view the keys in your acct.
+   - cannot change key properties.
+
+
