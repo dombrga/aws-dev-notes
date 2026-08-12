@@ -69,4 +69,23 @@
    - can view the keys in your acct.
    - cannot change key properties.
 
+## aws kms key policies
+1. resource policy for controlling access to kms keys.
+2. json
+3. primary method for access.
+4. each kms key must have one policy.
+5. work with iam policies and key grants.
+6. for any principal, explicit permission is required to access kms keys.
+7. any deny permission in evaluation chain will result in denial of use.
+8. **Key poli cies must explicitly allow access to keys. IAM alone is not enough.**
 
+### controlling permissions
+1. key policy
+   - can give full scope of access to the key in a single document
+2. combination
+   - iam policies with key policy.
+   - manage all permissions for your iam identities in iam.
+3. grants
+   - key policies for primary permissions, then grants temporarily allow permissions be delegated from authzed principals.
+   - commonly used by aws svcs.
+4. ![sample-key-policy](./images/33/key-policy1.png)
