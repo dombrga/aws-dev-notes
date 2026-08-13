@@ -49,3 +49,17 @@
    6. cross site scripting
 2. **exam tip:** can use **rate-based rule** to limit # of reqs when they come at too fast a rate.
 3. ![sample-scenario-archi](./images/34/waf-scenario.png)
+
+# aws network firewall
+1. stateful, managed, network firewall and intrusion and prevention service for VPCs.
+2. inspection and traffic filtering svc.
+3. includes firewall rules engine that gives complete control over network traffic.
+4. example
+   1. block outbound server msg block (SMB) reqs to stop spread of malicious activity.
+5. protects:
+   1. layer 3, 4, 7 inspection and protection
+   2. any direction of traffic (egress, ingress, vpc-2-vpc)
+6. firewall rules and concepts
+   - inspect and filter based on ip/port, protocol, domains, regex
+   - filter allows you to allow, drop, alert or matching traffic
+   - send logs to cw, s3, dfh
