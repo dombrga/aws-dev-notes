@@ -63,3 +63,16 @@
    - inspect and filter based on ip/port, protocol, domains, regex
    - filter allows you to allow, drop, alert or matching traffic
    - send logs to cw, s3, dfh
+
+# aws firewall manager
+1. security management svc.
+2. provides single view for centrally managing multiple WAF web acl rules across multiple accts in aws org.
+3. security policy resources that can be reused
+   1. aws waf rules
+   2. aws shield advanced
+   3. vpc sec grps
+   4. aws network fw
+   5. route 53 resolver dns firewall
+4. **exam pro tip**
+   1. existing rules automatically get applied to new resources that are being used and managed.
+   2. anything indicating need for multi-acct organizational waf rules.
