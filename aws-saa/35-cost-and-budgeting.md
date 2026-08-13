@@ -12,3 +12,19 @@
    1. aws-generated. **aws** prefix
    2. user-defined
    3. both must be activated separately
+
+# aws budgets
+1. svc to plan and set expectations on cloud costs.
+2. commonly used with aws org.
+3. track ongoing spend and create alerts when a limit is about to be reached or reached.
+4. use with aws cost explorer for more fine-grained budget.
+5. **tagging resources is important.**
+6. Budget actions
+   - run action when a budget exceeded threshold
+   - run automatically or manually
+7. action example
+   1. apply iam policies to restrict actions
+   2. apply scps to an org
+   3. send email or publish msg to topic
+8. exam scenario
+   - ![e](./images/35/budget-scenario.png)
