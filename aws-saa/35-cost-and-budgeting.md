@@ -28,3 +28,13 @@
    3. send email or publish msg to topic
 8. exam scenario
    - ![e](./images/35/budget-scenario.png)
+
+# aws cost and usage report (CUR)
+1. beginning to transition to aws data exports.
+2. will be referenced as CUR 2.0
+3. most comprehensive set of cost and usage data available for aws spending.
+4. publish recurring reports to amazon s3 for centralization.
+   - updates rports once a day using csv format
+5. athena, redshift, quicksight for query, analysis, viz
+6. use with Org
+7. ![cur](./images/35/cur.png)
