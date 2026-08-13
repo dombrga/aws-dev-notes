@@ -58,3 +58,8 @@
    2. aws acct
    3. region
    4. usage type
+
+# aws license manager
+1. svc to simplyfy managing licenses with diff vendors like ms, oracle, SAP.
+2. centrally manage across aws accts and onprem.
+3. offers control and visibility of usage of licenses.
