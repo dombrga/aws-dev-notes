@@ -38,3 +38,23 @@
 5. athena, redshift, quicksight for query, analysis, viz
 6. use with Org
 7. ![cur](./images/35/cur.png)
+
+# aws cost anomaly detection service
+1. aws billing and cost management feature to detect and alert unusual spend patterns.
+2. uses ML
+3. works with
+   1. aws svcs
+   2. linked member accts (Organizations)
+   3. cost categories
+   4. cost allocation tags
+4. can send alerts to
+   1. sns
+   2. slack
+   3. amazon chime
+5. helps to perform RCA
+6. learns historic patterns to help lower false alerts
+7. split report by
+   1. aws svc
+   2. aws acct
+   3. region
+   4. usage type
