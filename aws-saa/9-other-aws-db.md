@@ -1,11 +1,12 @@
 ### aws documentDB
 1. managed mongodb service.
-2. storage volume grows as data grows, up to 128 Tib in 10 gb increments.
-3. infrastructure similar to aurora.
-4. cluster
+2. acid compliant
+3. storage volume grows as data grows, up to 128 Tib in 10 gb increments.
+4. infrastructure similar to aurora.
+5. cluster
    1. instance-based
    2. elastic - supports millions of reads/writes per sec
-5. deploy in to vpc
+6. deploy in to vpc
 
 ### amazon neptune
 1. graphdb - stores nodes and relationships, instead of table or docs.

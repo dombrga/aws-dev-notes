@@ -15,7 +15,7 @@
 
 ### VPC Internet Gateway
 
-1. Allows communication between VPC and the internet.
+1. Allows 2-way communication between VPC and the internet.
 2. Supports IPv4 and IPv6.
 3. Created separately from VPC.
 4. Attachable to a **single VPC**.
@@ -26,7 +26,7 @@
 
 1. Range of IP addresses within a VPC for hosting.
 2. Bound to a single AZ and a single route table.
-3. Supports IPv4, IPv6, or dual stack.
+3. Suppox`rts IPv4, IPv6, or dual stack.
 4. Types: public, private, VPN-only, isolated.
 5. **Reserved addresses** (5 total): network address, VPC router, VPC DNS server, future use, broadcast address.
 6. VPC does **not** support broadcast traffic.

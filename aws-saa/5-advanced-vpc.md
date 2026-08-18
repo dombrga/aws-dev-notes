@@ -1,7 +1,7 @@
 ## June 23, 2026
 
 ### aws direct connect
-1. cloud svc to establish dedicated conn from your premises to aws.
+1. cloud svc to establish dedicated conn from your onpremises to aws.
 2. private conn between your data center and aws.
 3. can reduce network cost, increase bandwidth throughput.
 4. set up between data center and aws.

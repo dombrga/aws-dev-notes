@@ -8,3 +8,9 @@
 8. ![securecontainer deployment on ecs fargate](./images/labs/secure-container-ecs-fargate.png)
 9. almost always, cloudfront is used to front S3.
 10. IGE is bidirectional, NAT gw is only outbound.
+11. amazon redshift is for data warehousing, not ingestion.
+12. site-to-site vpn uses the public internet, so not good for establishing connection between servers with a requirement that conn do not use/traverse public internet.
+13. **Amazon S3 Glacier Deep Archive** is the lowest-cost storage class for long-term archival.
+14. aws glue is not good for realtime ingesting.
+15. S3 is not a file system.
+16. you can assign multiple security groups to a resource.
