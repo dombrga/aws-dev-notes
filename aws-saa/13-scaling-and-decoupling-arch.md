@@ -52,7 +52,10 @@ Pro tip: create tiers to separate public and private network traffic.
    2. Rules - attached to Listener.
    3. Target Group - composed of targets. EC2, lambda funcs.
 7.  target types
-   1. target types: ec2 instances, ec2 tasks, lambda func, private IPs.
+    1. ec2 instances
+    2. ec2 tasks
+    3. lambda func
+    4. private IPs
 8.  must deploy at least ssl/tls cert to use https listener.
 9.  Alias record for custom dns.
 10. X-forwarded-for, x-forwarded- port, x-forwarded-proto
@@ -88,16 +91,16 @@ Pro tip: create tiers to separate public and private network traffic.
 
 ## ELB optimizations
 1. session affinity (sticky sessions)
-  - allows to enable clients to always reach the same target.
-  - clb, alb, nlb.
-  - uses cookies. Overrides load balancing algo.
-  - good for maintaining user sessions.
+   - allows to enable clients to always reach the same target.
+   - clb, alb, nlb.
+   - uses cookies. Overrides load balancing algo.
+   - good for maintaining user sessions.
 2. deregistration delay (connection drain)
-  - deregister connections that become unhealthy.
-  - disable if you want lb to immediate close conn to instances that are unhealthy.
+   - deregister connections that become unhealthy.
+   - disable if you want lb to immediate close conn to instances that are unhealthy.
 3. ssl cert and https listeners
-  - ELBs use X.509 cert for tls.
-  - ACM or from other cert providers.
+   - ELBs use X.509 cert for tls.
+   - ACM or from other cert providers.
 4. SSL offloading
    1. offload
    2. pass-through

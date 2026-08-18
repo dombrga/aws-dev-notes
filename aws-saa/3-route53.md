@@ -15,10 +15,10 @@
 5. domain registration, dns routing config, and health checks.
 
 ### Hosted zones
-1. containners for records to specify how to route traffic to domains or subdomains.
+1. containers for records to specify how to route traffic to domains or subdomains.
 2. 2 types
    1. public hosted zone
-      - conatins records for for public internet.
+      - contains records for public internet.
    2. private hosted zone
       - for private domain names.
       - used with VPCs.
@@ -27,7 +27,7 @@
 ## June 23, 2026
 
 ### DNS record
-1. dictates how and wherey you want dns traffic routed.
+1. dictates how and where you want dns traffic routed.
 2. record
    - domain: pluralsight.com
    - record type: A, CNAME, MX, NS, SOA.
@@ -45,7 +45,7 @@
 1. setting for records to determine how route53 responds to dns queries.
 2. simple routing policy
    - for single resources and ip addr.
-   - alias recrods points to a single AWS resource, like ELB.
+   - alias records points to a single AWS resource, like ELB.
    - supports multiple values for same record.
    - returns values in random order.
 3. weighted routing policy
@@ -76,9 +76,9 @@
 2. if record fails health check, will be removed from route53 until is it healthy..
 3. types
    1. monitoring an endpoint
-      - rout5e54 uses ~15 global health checkers.
+      - route53 uses ~15 global health checkers.
       - interval can be 30 or 10 secs.
-      - results in 2xx or 3xx dode.
+      - results in 2xx or 3xx code.
       - ensure firewall allows health checkers.
       - for publicly resolvable records.
    2. monitoring other health checks

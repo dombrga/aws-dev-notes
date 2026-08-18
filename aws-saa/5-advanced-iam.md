@@ -52,14 +52,14 @@
    6. session policy
 2. there is an implicit deny in AWS in any requests.
 3. permission boundary
-   - feature using managed policy to set maximum permissoin than an identity-based policy can grant to iam identity.
+   - feature using managed policy to set maximum permission than an identity-based policy can grant to iam identity.
    - for example, you delegate iam to an admin, but you want to limit admin the maximum permission they can grant.
 4. new IAM entities always start with zero permissions. There is implicit deny. Grant explicit access if needed.
 
 ### custom conditions and statements
 1. condition statements
    1. externalID
-      - unique identifier that cen be required when you assume a role in another account.
+      - unique identifier that can be required when you assume a role in another account.
       - confused deputy problem.
    2. aws:MultiFactorAuthPresent
       - checks if user has authenticated with MFA.

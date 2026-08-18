@@ -14,3 +14,4 @@
 14. aws glue is not good for realtime ingesting.
 15. S3 is not a file system.
 16. you can assign multiple security groups to a resource.
+17. aws parameter store does not support auto rotation.
