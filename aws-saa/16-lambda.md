@@ -1,5 +1,5 @@
 ## lambda
-1. Serverless - focus on code and leave mngmt of compute to otherss
+1. Serverless - focus on code and leave mngmt of compute to others.
    - ease of use
    - event based. Respond to an event.
 2. AWS Lambda

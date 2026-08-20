@@ -13,17 +13,17 @@
 5. lifecycle policies to manage images, like expire old images.
 6. cross region and cross acct repli.
 7. Concepts
-  1. image scanning - identify software vulnerability as they are pushed.
-  2. encryption - protect container images at rest with aws kms keys.
-  3. tagging and versioning - put tags in image or prevent tags from being modified.
-8. Commonly integrated AWS services
-  1. amazon ecs
-  2. amazon eks
+   1. image scanning - identify software vulnerability as they are pushed.
+   2. encryption - protect container images at rest with aws kms keys.
+   3.  tagging and versioning - put tags in image or prevent tags from being modified.
+8.  Commonly integrated AWS services
+    1.  amazon ecs
+    2.  amazon eks
 
 ## amazon ecs
 1. service to easily launch and manage docker containers.
   1. easily manage anywhere from 1 to 1k conts.
-  2. appropriate kepps them online. Self-healing.
+  2. appropriately keeps them online. Self-healing.
   3. can easily registered with ELBs.
   4. containers can have individual roles (Task role).
 2. ECS cluster - logical grouping of tasks (conts). Controlled by the launch type you choose.
@@ -33,13 +33,13 @@
       - must run the ECS agent.
       - aws handles starting and stopping of containers, but you maintain ec2 instances, like patching.
       - large, long running workload
-  1. fargate
+   2. fargate
       - serverless, pay-as-you-go offering.
       - You do not provision and manage infra.
       - you create a Task Definition.
       - you specify CPU and ram reqs/limits
       - large workloads and reduce operational overhead; small, burstable workload with no resource intensive reqs; periodic, batched workloads.
-  1. ec2 anywhere
+   3. ec2 anywhere
 4. cost saving
    1. spot instances for ecs ec2
    2. compute saving plan.
@@ -51,7 +51,7 @@
 2. Task role
    - can optionally have iam role to allow aws api calls. Like s3:GetObject, kms:Decrypt, sqs:ReceiveMessage.
    - Gets assigned to the task (container)
-3. Task Execytion role
+3. Task Execution role
    - aws iam role that allows containers on outside to make api calls.
    - Service itself uses this role.
    - used for pulling image from ecr, getting data in secrets manager.
@@ -132,7 +132,7 @@
    - want to view all clusters from k8s and onprem in one location.
 
 ## aws app runner
-1. deploying from source code or container image to a secure web app.
+1. svc for deploying from source code or container image to a secure web app.
 2. allows to focus on code and images by directly connecting to repositories.
 3. use case
    1. simply deploying updated versions of code or cont images.
