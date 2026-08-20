@@ -55,11 +55,10 @@
 4. js or ts for backend
 
 ## debug app using aws x-ray
-1. service that collects data about reqs.
+1. service that collects data about requests.
 2. Can view, filter and gain insights. can help in debugging, optimization.
 3. Can be used for observability and traceability.
 4. Can view calls to all downstream aws resources and other microsvc/APIs or db involve in req.
 5. commonly used with api gw and lambda.
 6. Can integrate with the ff
    ![xray integ](./images/18/xray-integ.png)
-6.

@@ -1,6 +1,6 @@
 ## Decoupled architectures
 ### Tightly coupled archi
-1. components heavily dependon each other.
+1. components heavily depend on each other.
 2. If one is impacted by downtime, entire system is impacted.
 3. Leverage synchronous system design. Components directly communicate with each other. Interact same time or realtime.
 
@@ -20,12 +20,12 @@
 ## amazon sqs
 1. msg queue svc for async processing of work.
 2. to implement decoupled and distributed systems using diff queues.
-3. A resource called producer sends a msg to an SQS queue, and anothe resource called consumer pulls it for processing.
-4. To build a buffer between components. When producers produce msg faster consumption, msg can be queued and will be processed some time later.
+3. A resource called **producer** sends a msg to an SQS queue, and another resource called **consumer** pulls it for processing.
+4. To build a buffer between components. When producers produce msg faster than consumption, msg can be queued and will be processed some time later.
 5. Concepts
-   1. send msg to queue via SendMessage api.
-   2. poll and receive msg via ReceiveMessage api.
-   3. DeleteMessage api after receiving and processing msg.
+   1. send msg to queue via **SendMessage** api.
+   2. poll and receive msg via **ReceiveMessage** api.
+   3. **DeleteMessage** api after receiving and processing msg.
 6. Commonly integrated with lambda func and api gw.
    - api gw is producer.
    - lambda is consumer.

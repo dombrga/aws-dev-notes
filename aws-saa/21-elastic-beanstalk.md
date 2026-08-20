@@ -26,7 +26,7 @@
 3. Environment - collection of aws resources running app version.
    - you run a single app version at a time, per env.
 4. Environment Tier - to let you know the type of app being ran and underlying resources.
-   1. Web server - deploys maanged ASG behind ELB with CNAME url
+   1. Web server - deploys managed ASG behind ELB with CNAME url
    2. worker tier - deploys ASG that scales based on msgs in SQS queue.
 
 ## aws eb deployments
