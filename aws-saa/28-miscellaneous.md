@@ -8,7 +8,7 @@
 5. sample archi - ![pinpoint-sample](./images/27/pintpoint-sample.png)
 
 ## aws amplify
-1. offers tools and libraries for frontend web and mobile devsto build full stack apps.
+1. offers tools and libraries for frontend web and mobile devs to build full stack apps.
 2. offers
    1. frontend libs
    2. ui comps

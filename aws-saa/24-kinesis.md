@@ -11,12 +11,12 @@
 
 ## amazon kinesis data streams (kds)
 1. **realtime streaming** of incoming data.
-2. apps called consumers read data records from the streams.
+2. apps called **consumers** read data records from the streams.
 3. perfect for large amounts of fast data ingestion.
 4. typically takes <1 sec for data to be pulled off a stream.
 
 ### Concepts
-1. Producers are the one pushing data to kinesis data streams.
+1. **Producers** are the one pushing data to kinesis data streams.
 2. Consumers (apps) processes the stream data in realtime.
 3. Kinesis data streams contain shards, which what hold your data. Contains sequenced **data records**.
 4. Data records are unit of data. 1 mb in size.
@@ -59,7 +59,7 @@
 
 ## amazon data firehose (dfh)
 1. **near realtime**, managed, serverless data streaming solution.
-2. producers send data to a stream and it auto sends it to a configured destination. **Only 1 destination is allowed**, unlike kds..
+2. producers send data to a stream and it auto sends it to a configured destination. **Only 1 destination is allowed**, unlike kds...
 3. commonly used to send ingested data to
    1. s3
    2. redshift table
@@ -80,7 +80,7 @@
 5. sample dfh lambda scenario - ![dfh-lambda](./images/24/dfh-lambda.png)
 
 ### records and buffers
-1. records <= 1000 kb
+1. records <=1000 kb
 2. incoming data is buffered before being sent to desti.
    1. buffer size
    2. buffer interval

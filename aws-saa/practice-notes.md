@@ -15,3 +15,4 @@
 15. S3 is not a file system.
 16. you can assign multiple security groups to a resource.
 17. aws parameter store does not support auto rotation.
+18. Use Amazon Route 53 with a latency-based routing policy and configure health checks for each endpoint.
