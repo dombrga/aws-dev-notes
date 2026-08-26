@@ -47,7 +47,7 @@
    3. collect logs from ec2/onprem
 3. need proper IAM permissions so agent can push to cw logs.
 4. **CW logs unified agent (cwlua)** is the updated version of cw agent.
-   - supports more colection options (metrics, log locations, etc), more destis now just cw.
+   - supports more collection options (metrics, log locations, etc), more destis not just cw.
 5. Default metrics
    1. disk consump
    2. cpu usage

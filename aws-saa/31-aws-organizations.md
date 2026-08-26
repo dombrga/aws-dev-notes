@@ -80,7 +80,7 @@
 6. aws control tower account factory - repeatable deployment of new accts.
 
 # aws resource access manager
-1. free svc that allows ot share resources with other accts without creating duplicates.
+1. free svc that allows to share resources with other accts without creating duplicates.
 2. member accts in org or external accts.
 3. commonly shared resources
    1. transit gw

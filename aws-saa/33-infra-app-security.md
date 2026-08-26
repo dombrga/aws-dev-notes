@@ -10,7 +10,7 @@
 ### public tls certs
 1. request and use public tls cert for free.
 2. still pay for resources using them.
-3. auto renewal of acm-issued tls cert. Auto renew 60 day s before expiration if still valid.
+3. auto renewal of acm-issued tls cert. Auto renew 60 days before expiration if still valid.
 
 ### types of domain to know
 1. FQDN - complete address of a host on the internet to specify exact location. Example, **www.pluralsight.com**.
@@ -59,11 +59,11 @@
    - can enable and disable key.
    - can enable auto rotation of key material. Or manually rotate.
    - schedule deletion of keys with 7-30 day waiting period.
-   - never free. Pa per use and a monthly fee per key
+   - never free. Pay per use and a monthly fee per key
 2. aws owned
    - kms key that aws svc owns and manages for use in multiple aws accts.
-   - perfect if you do not need to audit or control the key
-   - free of charge. Rotation and deletiongs are managed.
+   - perfect if you do not need to audit or control the key.
+   - free of charge. Rotation and deletions are managed.
 3. aws managed
    - legacy, replaced by the similar aws owned.
    - can view the keys in your acct.
@@ -77,7 +77,7 @@
 5. work with iam policies and key grants.
 6. for any principal, explicit permission is required to access kms keys.
 7. any deny permission in evaluation chain will result in denial of use.
-8. **Key poli cies must explicitly allow access to keys. IAM alone is not enough.**
+8. **Key policies must explicitly allow access to keys. IAM alone is not enough.**
 
 ### controlling permissions
 1. key policy

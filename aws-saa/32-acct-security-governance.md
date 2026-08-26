@@ -15,8 +15,8 @@
    - record of an activity in an aws acct, providing historical trails
 7. ct event types
    1. **management events** - info about mngmt operations. For example, TerminateInstance ec2 api call.
-   2. **data events** - info about operations on resource. Tends to be high volume. Example is s3 GetObject
-   3. **Insights events** - capture unusual api call/errors rates in your aws accts
+   2. **data events** - info about operations on resource. Tends to be high volume. Example is s3 GetObject.
+   3. **Insights events** - capture unusual api call/errors rates in your aws accts.
 8. Event retention
    - up to 90 days before removal
    - can be customized using cw and s3
@@ -32,14 +32,14 @@
 7. can set up SNS notif for log file updates, for example in s3.
 8. **Organizational trail**
    - configure delivery of ct events in the mngmt acct and member accts in an org to same s3, cw logs, and eventbridge.
-9. Log file valida tion
+9. Log file validation
    - feature to help determine whether log file was modified, delete or unchanged after ct delivered it to the destination.
 10. get one free trail per region.
 11. exam scenario
     - ![cloudtrail-scenario](./images/32/ct-scenario.png)
 
 # aws Config
-1. inventogy mnagement and control tool that allows you to view the config history of your infra over time.
+1. inventory mnagement and control tool that allows you to view the config history of your infra over time.
 2. offer the ability to create rules to make sure resources conform to your reqs.
 3. configured per region.
 4. can receive alerts via sns when changes in compliance occur.
@@ -49,7 +49,7 @@
    1. COMPLIANT
    2. NON_COMPLIANT
 8. **AWS Config is a reactive svc, not proactive.** Does not prevent changes.
-9. commonuse cases
+9. common use cases
    1. **restricted-ssh** - make sure incoming ssh traffic for sec grps is accessible to a restricted CIDR, not open to the internet.
    2. **ec2-ebs-encryption-by-default** - check ebs encryption is on
    3. **s3-bucket-server-side-encryption-enabled** - check s3 bucket has default encryption enabled or denies PutObject calls without encryption.
@@ -72,7 +72,7 @@
    3. sns
 
 # aws truster advisor
-1. fully managede best-practice auditing tool for aws accts.
+1. fully managed best-practice auditing tool for aws accts.
 2. account level.
 3. requires no agent installed.
 4. uses industry and customer-established best practices.
@@ -110,7 +110,7 @@
 # Amazon GuardDuty
 1. managed threat detection svc or IDS.
 2. Uses ML to detect malicious behavior.
-3. not intrusion prevention svc, but ids.
+3. not intrusion prevention svc, but **intrusion detection**.
 4. example
    1. detect unusual api calls from malicious IP
    2. compromised instance
@@ -125,9 +125,9 @@
    2. vpc flow logs
    3. route53 resolver dns query logs
 10. extended sources
-   1. rds/aurora
-   2. s3
-   3. lambda and eks
+    1.  rds/aurora
+    2.  s3
+    3.  lambda and eks
 11. **exam pro tip:** it is common to set up a delegated admin acct for amazon guardduty for centralized reporting.
 
 # amazon macie
@@ -144,7 +144,7 @@
    3. macie
    4. firewall manager
 2. aggregates across multiple accts in an org via delegated admin member acct.
-3. perfect for centralizing findigs for
+3. perfect for centralizing findings for
    1. NIST
    2. PCI DSS
 

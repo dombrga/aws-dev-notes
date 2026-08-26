@@ -1,6 +1,6 @@
 1. **VPC peering** is for private VPCs to talk to each other without traversing the public internet.
 2. **aws direct connect** is private dedicated network to connect your onprem to aws.
-3. meta-data/ to access ec2 instance metadata.
+3. /meta-data to access ec2 instance metadata.
 4. Resource policy - you attach to the resource being accessed.
 5. If you want to minimize maintenance and patching, consider Serverless architecture and svcs.
 6. When there is **Principal** in the policy, it is a resource-based policy.
@@ -16,3 +16,6 @@
 16. you can assign multiple security groups to a resource.
 17. aws parameter store does not support auto rotation.
 18. Use Amazon Route 53 with a latency-based routing policy and configure health checks for each endpoint.
+19. VPC endpts allows VPC resources to privately access aws svcs without traversing public internet.
+20. dynamodb DAX is a caching svc for dynamodb.
+21. think of AWS IoT core for ingesting data from iot and embedded devices.
