@@ -22,3 +22,4 @@
 22. aws inspector is sast/dast? aws detective is
 23. **Gateway Load Balancer** is for easily deploying virtual network appliance. For traffic inspection.
 24. **AWS inspection VPC** is a dedicated vpc for routing, monitoring, filtering network traffic between VPCs, onprem, and internet.
+25. Use AWS Config rules to configure required settings for aws service and check/detect if the service does not follow this setting. Example, aws svcs should have tags. If there is no tag, detect which svcs and notify.
