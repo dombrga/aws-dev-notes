@@ -59,3 +59,51 @@ What should a solutions architect do to meet these requirements?
     D. Move the catalog to an Amazon Elastic File System (Amazon EFS) file system.
 
     EFS is fully managed, durable, highly available, and shared file system.
+
+50\. A company has a production workload that runs on 1,000 Amazon EC2 Linux instances. The workload is powered by third-party software. The company needs to patch the third-party software on all EC2 instances as quickly as possible to remediate a critical security vulnerability.
+
+What should a solutions architect do to meet these requirements?
+
+    D. Use AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances.
+
+    AWS Systems Manager Run Command allows the company to run commands or scripts on multiple EC2 instances. By using Run Command, the company can quickly and easily apply the patch to all 1,000 EC2 instances to remediate the security vulnerability.
+
+51\. A company is developing an application that provides order shipping statistics for retrieval by a REST API. The company wants to extract the shipping statistics, organize the data into an easy-to-read HTML format, and send the report to several email addresses at the same time every morning.
+
+Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)
+
+    D. Create an Amazon EventBridge (Amazon CloudWatch Events) scheduled event that invokes an AWS Lambda function to query the application's API for the data.
+    B. Use Amazon Simple Email Service (Amazon SES) to format the data and to send the report by email.
+
+52\. A company wants to migrate its on-premises application to AWS. The application produces output files that vary in size from tens of gigabytes to hundreds of terabytes. The application data must be stored in a standard file system structure. The company wants a solution that scales automatically. is highly available, and requires minimum operational overhead.
+
+Which solution will meet these requirements?
+
+    C. Migrate the application to Amazon EC2 instances in a Multi-AZ Auto Scaling group. Use Amazon Elastic File System (Amazon EFS) for storage.
+
+56\. A company has registered its domain name with Amazon Route 53. The company uses Amazon API Gateway in the ca-central-1 Region as a public interface for its backend microservice APIs. Third-party services consume the APIs securely. The company wants to design its API Gateway URL with the company's domain name and corresponding certificate so that the third-party services can use HTTPS.
+
+Which solution will meet these requirements?
+
+    C. Create a Regional API Gateway endpoint. Associate the API Gateway endpoint with the company's domain name. Import the public
+    certificate associated with the company's domain name into AWS Certificate Manager (ACM) in the same Region. Attach the certificate to the
+    API Gateway endpoint. Configure Route 53 to route traffic to the API Gateway endpoint.
+
+62\. A company is deploying a new public web application to AWS. The application will run behind an Application Load Balancer (ALB). The application needs to be encrypted at the edge with an SSL/TLS certificate that is issued by an external certificate authority (CA). The certificate must be rotated each year before the certificate expires.
+
+What should a solutions architect do to meet these requirements?
+
+    D. Use AWS Certificate Manager (ACM) to import an SSL/TLS certificate. Apply the certificate to the ALB. Use Amazon EventBridge (Amazon CloudWatch Events) to send a notification when the certificate is nearing expiration. Rotate the certificate manually.
+
+64\. A company has more than 5 TB of file data on Windows file servers that run on premises. Users and applications interact with the data each day.
+The company is moving its Windows workloads to AWS. As the company continues this process, the company requires access to AWS and on-premises file storage with minimum latency. The company needs a solution that minimizes operational overhead and requires no significant changes to the existing file access patterns. The company uses an AWS Site-to-Site VPN connection for connectivity to AWS.
+
+What should a solutions architect do to meet these requirements?
+
+    D. Deploy and configure Amazon FSx for Windows File Server on AWS. Deploy and configure an Amazon FSx File Gateway on premises. Move the on-premises file data to the FSx File Gateway. Configure the cloud workloads to use FSx for Windows File Server on AWS. Configure the on-premises workloads to use the FSx File Gateway.
+
+68\. A solutions architect is designing a new hybrid architecture to extend a company's on-premises infrastructure to AWS. The company requires a highly available connection with consistent low latency to an AWS Region. The company needs to minimize costs and is willing to accept slower traffic if the primary connection fails.
+
+What should the solutions architect do to meet these requirements?
+
+    A. Provision an AWS Direct Connect connection to a Region. Provision a VPN connection as a backup if the primary Direct Connect connection fails.

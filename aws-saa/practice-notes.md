@@ -23,3 +23,5 @@
 23. **Gateway Load Balancer** is for easily deploying virtual network appliance. For traffic inspection.
 24. **AWS inspection VPC** is a dedicated vpc for routing, monitoring, filtering network traffic between VPCs, onprem, and internet.
 25. Use AWS Config rules to configure required settings for aws service and check/detect if the service does not follow this setting. Example, aws svcs should have tags. If there is no tag, detect which svcs and notify.
+26. **S3 Intelligent-Tiering** is the ideal storage class for data with unknown, changing, or unpredictable access patterns, independent of object size or retention period. You can use S3 Intelligent-Tiering as the default storage class for virtually any workload, especially data lakes, data analytics, new applications, and user-generated content.
+27. Only private subnet EC2s can access RDS.	Need to explicitly allow private subnet instances while blocking everything else
