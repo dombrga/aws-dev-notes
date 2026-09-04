@@ -107,3 +107,58 @@ What should a solutions architect do to meet these requirements?
 What should the solutions architect do to meet these requirements?
 
     A. Provision an AWS Direct Connect connection to a Region. Provision a VPN connection as a backup if the primary Direct Connect connection fails.
+
+### 73.
+A company recently launched Linux-based application instances on Amazon EC2 in a private subnet and launched a Linux-based bastion host on an Amazon EC2 instance in a public subnet of a VPC. A solutions architect needs to connect from the on-premises network, through the company's internet connection, to the bastion host, and to the application servers. The solutions architect must make sure that the security groups of all the EC2 instances will allow that access.
+
+Which combination of steps should the solutions architect take to meet these requirements? (Choose two.)
+
+    C. Replace the current security group of the bastion host with one that only allows inbound access from the external IP range for the company.
+    D. Replace the current security group of the application instances with one that allows inbound SSH access from only the private IP address of the bastion host.
+
+### 74.
+A solutions architect is designing a two-tier web application. The application consists of a public-facing web tier hosted on Amazon EC2 in public subnets. The database tier consists of Microsoft SQL Server running on Amazon EC2 in a private subnet. Security is a high priority for the company.
+
+How should security groups be configured in this situation? (Choose two.)
+
+    A. Configure the security group for the web tier to allow inbound traffic on port 443 from 0.0.0.0/0.
+    C. Configure the security group for the database tier to allow inbound traffic on port 1433 from the security group for the web tier.
+
+### 77
+A company needs to configure a real-time data ingestion architecture for its application. The company needs an API, a process that transforms data as the data is streamed, and a storage solution for the data.
+
+Which solution will meet these requirements with the LEAST operational overhead?
+
+  C. Configure an Amazon API Gateway API to send data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use the Kinesis Data Firehose delivery stream to send the data to Amazon S3.
+
+### 84
+A company wants to reduce the cost of its existing three-tier web architecture. The web, application, and database servers are running on Amazon EC2 instances for the development, test, and production environments. The EC2 instances average 30% CPU utilization during peak hours and 10% CPU utilization during non-peak hours.
+The production EC2 instances run 24 hours a day. The development and test EC2 instances run for at least 8 hours each day. The company plans to implement automation to stop the development and test EC2 instances when they are not in use.
+
+Which EC2 instance purchasing solution will meet the company's requirements MOST cost-effectively?
+
+    B. Use Reserved Instances for the production EC2 instances. Use On-Demand Instances for the development and test EC2 instances.
+
+### 85
+A company has a production web application in which users upload documents through a web interface or a mobile app. According to a new regulatory requirement. new documents cannot be modified or deleted after they are stored.
+
+What should a solutions architect do to meet this requirement?
+
+    A. Store the uploaded documents in an Amazon S3 bucket with S3 Versioning and S3 Object Lock enabled.
+
+### 87
+A company hosts an application on AWS Lambda functions that are invoked by an Amazon API Gateway API. The Lambda functions save customer data to an Amazon Aurora MySQL database. Whenever the company upgrades the database, the Lambda functions fail to establish database connections until the upgrade is complete. The result is that customer data is not recorded for some of the event.
+
+A solutions architect needs to design a solution that stores customer data that is created during database upgrades.
+
+Which solution will meet these requirements?
+
+    D. Store the customer data in an Amazon Simple Queue Service (Amazon SQS) FIFO queue. Create a new Lambda function that polls the queue and stores the customer data in the database.
+
+### 93
+A company runs an on-premises application that is powered by a MySQL database. The company is migrating the application to AWS to increase the application's elasticity and availability.
+The current architecture shows heavy read activity on the database during times of normal operation. Every 4 hours, the company's development team pulls a full export of the production database to populate a database in the staging environment. During this period, users experience unacceptable application latency. The development team is unable to use the staging environment until the procedure completes.
+A solutions architect must recommend replacement architecture that alleviates the application latency issue. The replacement architecture also must give the development team the ability to continue using the staging environment without delay.
+Which solution meets these requirements?
+
+    B. Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Use database cloning to create the staging database on-demand.

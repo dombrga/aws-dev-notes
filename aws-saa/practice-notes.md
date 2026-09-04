@@ -11,7 +11,7 @@
 11. amazon redshift is for data warehousing, not ingestion.
 12. site-to-site vpn uses the public internet, so not good for establishing connection between servers with a requirement that conn do not use/traverse public internet.
 13. **Amazon S3 Glacier Deep Archive** is the lowest-cost storage class for long-term archival.
-14. aws glue is not good for realtime ingesting.
+14. aws glue is not good for any realtime or realtime ingesting or streaming. Good for large-scale batch.
 15. S3 is not a file system.
 16. you can assign multiple security groups to a resource.
 17. aws parameter store does not support auto rotation.
