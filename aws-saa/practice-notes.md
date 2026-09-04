@@ -25,3 +25,6 @@
 25. Use AWS Config rules to configure required settings for aws service and check/detect if the service does not follow this setting. Example, aws svcs should have tags. If there is no tag, detect which svcs and notify.
 26. **S3 Intelligent-Tiering** is the ideal storage class for data with unknown, changing, or unpredictable access patterns, independent of object size or retention period. You can use S3 Intelligent-Tiering as the default storage class for virtually any workload, especially data lakes, data analytics, new applications, and user-generated content.
 27. Only private subnet EC2s can access RDS.	Need to explicitly allow private subnet instances while blocking everything else
+28. **AWS DataSync** is an online service that makes it fast and easy to move, migrate, and replicate large amounts of data between on-premises storage, other clouds, and Amazon Web Services storage services.
+29. **AWS Glue Job Bookmarks** track which jobs have already been processed.
+30. AWS GuardDuty is an IDS and does not block attackers, only detects.

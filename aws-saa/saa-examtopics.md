@@ -162,3 +162,41 @@ A solutions architect must recommend replacement architecture that alleviates th
 Which solution meets these requirements?
 
     B. Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Use database cloning to create the staging database on-demand.
+
+### 98
+An image-processing company has a web application that users use to upload images. The application uploads the images into an Amazon S3 bucket. The company has set up S3 event notifications to publish the object creation events to an Amazon Simple Queue Service (Amazon SQS) standard queue. The SQS queue serves as the event source for an AWS Lambda function that processes the images and sends the results to users through email.
+Users report that they are receiving multiple email messages for every uploaded image. A solutions architect determines that SQS messages are invoking the Lambda function more than once, resulting in multiple email messages.
+
+What should the solutions architect do to resolve this issue with the LEAST operational overhead?
+
+    C. Increase the visibility timeout in the SQS queue to a value that is greater than the total of the function timeout and the batch window
+timeout.
+
+### 101. The answer is AWS recommended best practice pattern.
+A solutions architect is designing a VPC with public and private subnets. The VPC and subnets use IPv4 CIDR blocks. There is one public subnet and one private subnet in each of three Availability Zones (AZs) for high availability. An internet gateway is used to provide internet access for the public subnets. The private subnets require access to the internet to allow Amazon EC2 instances to download software updates.
+
+What should the solutions architect do to enable Internet access for the private subnets?
+
+  A. Create three NAT gateways, one for each public subnet in each AZ. Create a private route table for each AZ that forwards non-VPC traffic to the NAT gateway in its AZ.
+
+### 102
+A company wants to migrate an on-premises data center to AWS. The data center hosts an SFTP server that stores its data on an NFS-based file system. The server holds 200 GB of data that needs to be transferred. The server must be hosted on an Amazon EC2 instance that uses an Amazon Elastic File System (Amazon EFS) file system.
+
+Which combination of steps should a solutions architect take to automate this task? (Choose two.)
+
+    B. Install an AWS DataSync agent in the on-premises data center.
+    E. Use AWS DataSync to create a suitable location configuration for the on-premises SFTP server.
+
+### 103
+A company has an AWS Glue extract, transform, and load (ETL) job that runs every day at the same time. The job processes XML data that is in an Amazon S3 bucket. New data is added to the S3 bucket every day. A solutions architect notices that AWS Glue is processing all the data during each run.
+
+What should the solutions architect do to prevent AWS Glue from reprocessing old data?
+
+    A. Edit the job to use job bookmarks.
+
+### 105
+A company is preparing to deploy a new serverless workload. A solutions architect must use the principle of least privilege to configure permissions that will be used to run an AWS Lambda function. An Amazon EventBridge (Amazon CloudWatch Events) rule will invoke the function.
+
+Which solution meets these requirements?
+
+  D. Add a resource-based policy to the function with lambda:InvokeFunction as the action and Service: events.amazonaws.com as the principal.
