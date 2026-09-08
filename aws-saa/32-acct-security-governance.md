@@ -71,7 +71,7 @@
    2. send updated config details to s3
    3. sns
 
-# aws truster advisor
+# aws trusted advisor
 1. fully managed best-practice auditing tool for aws accts.
 2. account level.
 3. requires no agent installed.

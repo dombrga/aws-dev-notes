@@ -199,4 +199,20 @@ A company is preparing to deploy a new serverless workload. A solutions architec
 
 Which solution meets these requirements?
 
-  D. Add a resource-based policy to the function with lambda:InvokeFunction as the action and Service: events.amazonaws.com as the principal.
+    D. Add a resource-based policy to the function with lambda:InvokeFunction as the action and Service: events.amazonaws.com as the principal.
+
+
+### 113
+A company uses 50 TB of data for reporting. The company wants to move this data from on premises to AWS. A custom application in the company’s data center runs a weekly data transformation job. The company plans to pause the application until the data transfer is complete and needs to begin the transfer process as soon as possible.
+The data center does not have any available network bandwidth for additional workloads. A solutions architect must transfer the data and must configure the transformation job to continue to run in the AWS Cloud.
+
+Which solution will meet these requirements with the LEAST operational overhead?
+
+    C. Order an AWS Snowball Edge Storage Optimized device. Copy the data to the device. Create a custom transformation job by using AWS Glue.
+
+### 119
+A global company is using Amazon API Gateway to design REST APIs for its loyalty club users in the us-east-1 Region and the ap-southeast-2 Region. A solutions architect must design a solution to protect these API Gateway managed REST APIs across multiple accounts from SQL injection and cross-site scripting attacks.
+
+Which solution will meet these requirements with the LEAST amount of administrative effort?
+
+    B. Set up AWS Firewall Manager in both Regions. Centrally configure AWS WAF rules.

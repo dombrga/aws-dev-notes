@@ -28,3 +28,5 @@
 28. **AWS DataSync** is an online service that makes it fast and easy to move, migrate, and replicate large amounts of data between on-premises storage, other clouds, and Amazon Web Services storage services.
 29. **AWS Glue Job Bookmarks** track which jobs have already been processed.
 30. AWS GuardDuty is an IDS and does not block attackers, only detects.
+31. NAT gw is deployed to public subnets. For HA, you should deploy NAT to 2 subnets.
+32. it is fine for ec2 and rds to be on the same private subnet, but it can be a better practice to separate them.
