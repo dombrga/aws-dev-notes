@@ -30,3 +30,8 @@
 30. AWS GuardDuty is an IDS and does not block attackers, only detects.
 31. NAT gw is deployed to public subnets. For HA, you should deploy NAT to 2 subnets.
 32. it is fine for ec2 and rds to be on the same private subnet, but it can be a better practice to separate them.
+33. SSE-KMS is good when cross-region replication is mentioned. KMS multi-region keys seamlessly work across regions.
+34. AWS PrivateLink does not traverse public internet. Cross-account and crossregion.
+35. S3 can perform replication to another bucket.
+36. AWS Config only detects and alerts, not prevents.
+37. amazon DLM is for ami and ebs snapshots, not rds backups.
