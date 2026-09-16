@@ -327,3 +327,37 @@ Which solution will meet these requirements?
     D. Create an Elastic IP address. Configure the Lambda function to send traffic through the Elastic IP address without an elastic network interface.
 
     A
+
+### 237
+An application running on an Amazon EC2 instance in VPC-A needs to access files in another EC2 instance in VPC-B. Both VPCs are in separate AWS accounts. The network administrator needs to design a solution to configure secure access to EC2 instance in VPC-B from VPC-A. The connectivity should not have a single point of failure or bandwidth concerns.
+
+Which solution will meet these requirements?
+
+    A. Set up a VPC peering connection between VPC-A and VPC-B.
+
+    A VPC peering connection allows secure communication between instances in different VPCs using private IP addresses without the need for internet gateways, VPN connections, or NAT devices. By setting it up, the application running in VPC-A can directly access the EC2 in VPC-B without going through the public internet or any single point of failure.
+
+### 239
+A solutions architect needs to design a new microservice for a company’s application. Clients must be able to call an HTTPS endpoint to reach the microservice. The microservice also must use AWS Identity and Access Management (IAM) to authenticate calls. The solutions architect will write the logic for this microservice by using a single AWS Lambda function that is written in Go 1.x.
+
+Which solution will deploy the function in the MOST operationally efficient way?
+
+    B. Create a Lambda function URL for the function. Specify AWS_IAM as the authentication type.
+
+    Explanation: A Lambda function URL gives the function its own HTTPS endpoint directly, with no separate API Gateway resource to create or manage. Setting the auth type to AWS_IAM satisfies the IAM-authentication requirement, making this the more operationally efficient option compared to fronting the function with a full API Gateway REST API.
+
+### 635
+A company uses Amazon FSx for NetApp ONTAP in its primary AWS Region for CIFS and NFS file shares. Applications that run on Amazon EC2 instances access the file shares. The company needs a storage disaster recovery (DR) solution in a secondary Region. The data that is replicated in the secondary Region needs to be accessed by using the same protocols as the primary Region.
+
+Which solution will meet these requirements with the LEAST operational overhead?
+
+    C. Create an FSx for ONTAP instance in the secondary Region. Use NetApp SnapMirror to replicate data from the primary Region to the secondary Region.
+
+    FSx for ONTAP supports NetApp SnapMirror, which is a robust data replication technology. You can use SnapMirror to replicate data from the primary FSx for ONTAP instance in the primary Region to an FSx for ONTAP instance in the secondary Region.
+
+### 638
+A company collects and shares research data with the company's employees all over the world. The company wants to collect and store the data in an Amazon S3 bucket and process the data in the AWS Cloud. The company will share the data with the company's employees. The company needs a secure solution in the AWS Cloud that minimizes operational overhead.
+
+Which solution will meet these requirements?
+
+    A. Use an AWS Lambda function to create an S3 presigned URL. Instruct employees to use the URL
