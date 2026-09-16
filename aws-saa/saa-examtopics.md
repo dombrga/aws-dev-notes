@@ -1,3 +1,10 @@
+### 24
+A company observes an increase in Amazon EC2 costs in its most recent bill. The billing team notices unwanted vertical scaling of instance types for a couple of EC2 instances. A solutions architect needs to create a graph comparing the last 2 months of EC2 costs and perform an in-depth analysis to identify the root cause of the vertical scaling.
+
+How should the solutions architect generate the information with the LEAST operational overhead?
+
+    B. Use Cost Explorer's granular filtering feature to perform an in-depth analysis of EC2 costs based on instance types.
+
 27\. A company is launching a new application and will display application metrics on an Amazon CloudWatch dashboard. The company's product manager needs to access this dashboard periodically. The product manager does not have an AWS account. A solutions architect must provide access to the product manager by following the principle of least privilege.
 
 Which solution will meet these requirements?
@@ -246,7 +253,7 @@ Which combination of actions must a solutions architect take to meet these requi
     A. Create an ongoing replication task.
     C. Create an AWS Database Migration Service (AWS DMS) replication server.
 
-138
+### 138
 A company runs its ecommerce application on AWS. Every new order is published as a massage in a RabbitMQ queue that runs on an Amazon EC2 instance in a single Availability Zone. These messages are processed by a different application that runs on a separate EC2 instance. This application stores the details in a PostgreSQL database on another EC2 instance. All the EC2 instances are in the same Availability Zone.
 The company needs to redesign its architecture to provide the highest availability with the least operational overhead.
 

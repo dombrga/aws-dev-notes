@@ -35,3 +35,5 @@
 35. S3 can perform replication to another bucket.
 36. AWS Config only detects and alerts, not prevents.
 37. amazon DLM is for ami and ebs snapshots, not rds backups.
+38. AWS aurora automated backup have max retention of 35 days.
+39. CloudFront can have multiple origins.
