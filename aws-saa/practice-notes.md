@@ -38,3 +38,4 @@
 38. AWS aurora automated backup have max retention of 35 days.
 39. CloudFront can have multiple origins.
 40. RDS Multi-AZ is only in a single region.
+41. s3 is a native target for vpc flow logs.

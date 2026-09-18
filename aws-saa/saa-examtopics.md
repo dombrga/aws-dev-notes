@@ -355,6 +355,74 @@ Which solution will meet these requirements with the LEAST amount of operational
 
     Amazon RDS for PostgreSQL allows you to create read replicas in different AWS Regions. This provides cross-Region availability and redundancy. Additionally, it allows you to offload read traffic from the primary database.
 
+### 246
+A company runs a web application on Amazon EC2 instances in multiple Availability Zones. The EC2 instances are in private subnets. A solutions architect implements an internet-facing Application Load Balancer (ALB) and specifies the EC2 instances as the target group. However, the internet traffic is not reaching the EC2 instances.
+
+How should the solutions architect reconfigure the architecture to resolve this issue?
+
+    D. Create public subnets in each Availability Zone. Associate the public subnets with the ALB. Update the route tables for the public subnets with a route to the private subnets.
+
+    This option involves creating public subnets for the ALB, allowing it to receive internet traffic. The EC2 instances can remain in private subnets. This approach follows the best practice of using public subnets for internet-facing components like ALBs.
+
+### 247
+A company has deployed a database in Amazon RDS for MySQL. Due to increased transactions, the database support team is reporting slow reads against the DB instance and recommends adding a read replica.
+
+Which combination of actions should a solutions architect take before implementing this change? (Choose two.)
+
+    B. Choose a failover priority for the source DB instance.
+    E. Enable automatic backups on the source instance by setting the backup retention period to a value other than 0
+
+### 249
+A company is implementing a shared storage solution for a media application that is hosted in the AWS Cloud. The company needs the ability to use SMB clients to access data. The solution must be fully managed.
+
+Which AWS solution meets these requirements?
+
+    D. Create an Amazon FSx for Windows File Server file system. Attach the file system to the origin server. Connect the application server to the file system.
+
+    Amazon FSx for Windows File Server is a fully managed file storage service that supports the SMB protocol. It provides a native Windows file system experience and is designed to be accessed by SMB clients. This option meets the requirements for a fully managed shared storage solution accessible via SMB.
+
+### 250
+A company’s security team requests that network traffic be captured in VPC Flow Logs. The logs will be frequently accessed for 90 days and then accessed intermittently.
+
+What should a solutions architect do to meet these requirements when configuring the logs?
+
+    D. Use Amazon S3 as the target. Enable an S3 Lifecycle policy to transition the logs to S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days.
+
+    Amazon S3 is a scalable and cost-effective object storage service. Enabling an S3 Lifecycle policy to transition logs to S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days is a suitable solution. This approach allows you to store the logs in a cost-effective manner, automatically moving them to a lower-cost storage class after the initial 90 days.
+
+### 260
+A company’s compliance team needs to move its file shares to AWS. The shares run on a Windows Server SMB file share. A self-managed on-premises Active Directory controls access to the files and folders.
+
+The company wants to use Amazon FSx for Windows File Server as part of the solution. The company must ensure that the on-premises Active Directory groups restrict access to the FSx for Windows File Server SMB compliance shares, folders, and files after the move to AWS. The company has created an FSx for Windows File Server file system.
+
+Which solution will meet these requirements?
+
+    D. Join the file system to the Active Directory to restrict access.
+
+    Join the File System to Active Directory:
+
+    By joining the FSx for Windows File Server file system to the on-premises Active Directory, you extend the trust relationship to AWS.
+    This ensures that access control is based on the on-premises Active Directory groups, allowing you to continue using the existing groups to restrict access to shares, folders, and files.
+    After joining the file system to Active Directory, you can manage access controls using the existing Active Directory groups.
+    Users and groups from the on-premises Active Directory can be granted appropriate permissions on the FSx file system.
+
+### 261
+A company recently announced the deployment of its retail website to a global audience. The website runs on multiple Amazon EC2 instances behind an Elastic Load Balancer. The instances run in an Auto Scaling group across multiple Availability Zones.
+
+The company wants to provide its customers with different versions of content based on the devices that the customers use to access the website.
+
+Which combination of actions should a solutions architect take to meet these requirements? (Choose two.)
+
+    A. Configure Amazon CloudFront to cache multiple versions of the content.
+
+    C. Configure a Lambda@Edge function to send specific objects to users based on the User-Agent header.
+
+    Amazon CloudFront is a content delivery network (CDN) service that can cache and deliver content globally.
+    Configure CloudFront to cache different versions of content based on the device type or other criteria.
+
+    Lambda@Edge allows you to run code in response to CloudFront events globally.
+    Use a Lambda@Edge function to inspect the User-Agent header and dynamically serve different versions of content based on the device type.
+
 ### 635
 A company uses Amazon FSx for NetApp ONTAP in its primary AWS Region for CIFS and NFS file shares. Applications that run on Amazon EC2 instances access the file shares. The company needs a storage disaster recovery (DR) solution in a secondary Region. The data that is replicated in the secondary Region needs to be accessed by using the same protocols as the primary Region.
 
